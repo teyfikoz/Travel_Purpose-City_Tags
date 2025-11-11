@@ -5,6 +5,7 @@ Cotonou,Benin,Africa,"BUSINESS,SEAMAN"
 Francistown,Botswana,Africa,BUSINESS
 Gaborone,Botswana,Africa,"BUSINESS,LEISURE"
 Maun,Botswana,Africa,LEISURE
+Okavango,Botswana,Africa,LEISURE
 Ouagadougou,Burkina Faso,Africa,BUSINESS
 Douala,Cameroon,Africa,"BUSINESS,SEAMAN"
 Kinshasa,Congo,Africa,BUSINESS
@@ -30,6 +31,7 @@ Conakry,Guinea,Africa,"BUSINESS,SEAMAN"
 Abidjan,Ivory Coast,Africa,"BUSINESS,SEAMAN"
 Eldoret,Kenya,Africa,BUSINESS
 Kisumu,Kenya,Africa,BUSINESS
+Masai Mara,Kenya,Africa,LEISURE
 Mombasa,Kenya,Africa,"LEISURE,SEAMAN,CRUISE"
 Nairobi,Kenya,Africa,"BUSINESS,MEDICAL,LEISURE"
 Monrovia,Liberia,Africa,"BUSINESS,SEAMAN"
@@ -86,6 +88,7 @@ George,South Africa,Africa,LEISURE
 Hermanus,South Africa,Africa,LEISURE
 Johannesburg,South Africa,Africa,"BUSINESS,MEDICAL,LEISURE"
 Knysna,South Africa,Africa,LEISURE
+Kruger,South Africa,Africa,LEISURE
 Nelspruit,South Africa,Africa,LEISURE
 Port Elizabeth,South Africa,Africa,"LEISURE,SEAMAN"
 Pretoria,South Africa,Africa,BUSINESS
@@ -96,6 +99,8 @@ Arusha,Tanzania,Africa,LEISURE
 Dar es Salaam,Tanzania,Africa,"BUSINESS,SEAMAN"
 Dodoma,Tanzania,Africa,BUSINESS
 Mwanza,Tanzania,Africa,"BUSINESS,SEAMAN"
+Ngorongoro,Tanzania,Africa,LEISURE
+Serengeti,Tanzania,Africa,LEISURE
 Tanga,Tanzania,Africa,SEAMAN
 Zanzibar,Tanzania,Africa,"LEISURE,CRUISE"
 Lome,Togo,Africa,"BUSINESS,SEAMAN"
@@ -124,6 +129,7 @@ Cordoba,Argentina,Americas,"BUSINESS,LEISURE"
 Iguazu Falls,Argentina,Americas,LEISURE
 Mar del Plata,Argentina,Americas,"LEISURE,CRUISE"
 Mendoza,Argentina,Americas,LEISURE
+Patagonia,Argentina,Americas,LEISURE
 Rosario,Argentina,Americas,BUSINESS
 Salta,Argentina,Americas,LEISURE
 Ushuaia,Argentina,Americas,"LEISURE,CRUISE"
@@ -191,6 +197,7 @@ Puerto Montt,Chile,Americas,"SEAMAN,LEISURE"
 Puerto Varas,Chile,Americas,LEISURE
 Punta Arenas,Chile,Americas,"LEISURE,CRUISE,SEAMAN"
 Santiago,Chile,Americas,"BUSINESS,MEDICAL,LEISURE"
+Torres del Paine,Chile,Americas,LEISURE
 Valdivia,Chile,Americas,LEISURE
 Valparaiso,Chile,Americas,"LEISURE,CRUISE"
 Vina del Mar,Chile,Americas,"LEISURE,CRUISE"
@@ -247,7 +254,7 @@ Negril,Jamaica,Americas,LEISURE
 Ocho Rios,Jamaica,Americas,"LEISURE,CRUISE"
 Fort-de-France,Martinique,Americas,"LEISURE,CRUISE"
 Acapulco,Mexico,Americas,"LEISURE,CRUISE"
-Cabo San Lucas,Mexico,Americas,"LEISURE,CRUISE"
+Cabo San Lucas,Mexico,Americas,"LEISURE,CRUISE,SECONDHOME"
 Cancun,Mexico,Americas,"LEISURE,CRUISE"
 Coatzacoalcos,Mexico,Americas,"BUSINESS,SEAMAN"
 Cozumel,Mexico,Americas,"LEISURE,CRUISE"
@@ -318,21 +325,25 @@ Denver,United States,Americas,"BUSINESS,LEISURE"
 Detroit,United States,Americas,BUSINESS
 Fairbanks,United States,Americas,LEISURE
 Fort Lauderdale,United States,Americas,"LEISURE,CRUISE,SEAMAN"
+Hamptons,United States,Americas,"LEISURE,SECONDHOME"
 Honolulu,United States,Americas,"LEISURE,CRUISE,SEAMAN"
 Houston,United States,Americas,"BUSINESS,SEAMAN"
 Indianapolis,United States,Americas,BUSINESS
+Jackson Hole,United States,Americas,LEISURE
 Juneau,United States,Americas,"LEISURE,CRUISE,SEAMAN"
 Kansas City,United States,Americas,BUSINESS
 Ketchikan,United States,Americas,"LEISURE,CRUISE,SEAMAN"
 Key West,United States,Americas,"LEISURE,CRUISE"
 Las Vegas,United States,Americas,LEISURE
 Los Angeles,United States,Americas,"BUSINESS,LEISURE,MEDICAL"
+Martha's Vineyard,United States,Americas,LEISURE
 Miami,United States,Americas,"BUSINESS,LEISURE,CRUISE"
 Milwaukee,United States,Americas,BUSINESS
 Minneapolis,United States,Americas,BUSINESS
 Monterey,United States,Americas,LEISURE
+Nantucket,United States,Americas,LEISURE
 Napa Valley,United States,Americas,LEISURE
-Naples,United States,Americas,LEISURE
+Naples,United States,Americas,"LEISURE,SECONDHOME"
 Nashville,United States,Americas,LEISURE
 New Orleans,United States,Americas,"LEISURE,CRUISE"
 New York,United States,Americas,"BUSINESS,LEISURE,CRUISE"
@@ -359,6 +370,7 @@ Sitka,United States,Americas,"LEISURE,CRUISE"
 Skagway,United States,Americas,"LEISURE,CRUISE"
 St Louis,United States,Americas,BUSINESS
 Tampa,United States,Americas,"BUSINESS,CRUISE"
+Telluride,United States,Americas,LEISURE
 Vail,United States,Americas,LEISURE
 Washington DC,United States,Americas,"BUSINESS,LEISURE"
 Montevideo,Uruguay,Americas,"BUSINESS,CRUISE,LEISURE"
@@ -372,6 +384,7 @@ Chittagong,Bangladesh,Asia,"BUSINESS,SEAMAN"
 Dhaka,Bangladesh,Asia,"BUSINESS,MEDICAL"
 Paro,Bhutan,Asia,"LEISURE,RELIGIOUS"
 Thimphu,Bhutan,Asia,"LEISURE,RELIGIOUS"
+Angkor Wat,Cambodia,Asia,"LEISURE,RELIGIOUS"
 Phnom Penh,Cambodia,Asia,"BUSINESS,LEISURE"
 Siem Reap,Cambodia,Asia,"LEISURE,RELIGIOUS"
 Sihanoukville,Cambodia,Asia,"LEISURE,SEAMAN"
@@ -402,13 +415,17 @@ Kolkata,India,Asia,"BUSINESS,SEAMAN"
 Mumbai,India,Asia,"BUSINESS,MEDICAL,SEAMAN"
 Pune,India,Asia,"BUSINESS,MEDICAL"
 Varanasi,India,Asia,"RELIGIOUS,LEISURE"
-Bali,Indonesia,Asia,"LEISURE,CRUISE"
+Bali,Indonesia,Asia,"LEISURE,CRUISE,SECONDHOME"
 Bandung,Indonesia,Asia,"BUSINESS,LEISURE"
 Batam,Indonesia,Asia,"BUSINESS,SEAMAN"
+Gili Islands,Indonesia,Asia,LEISURE
 Jakarta,Indonesia,Asia,"BUSINESS,SEAMAN"
 Lombok,Indonesia,Asia,"LEISURE,CRUISE"
 Medan,Indonesia,Asia,"BUSINESS,SEAMAN"
+Nusa Dua,Indonesia,Asia,LEISURE
+Seminyak,Indonesia,Asia,LEISURE
 Surabaya,Indonesia,Asia,"BUSINESS,SEAMAN"
+Ubud,Indonesia,Asia,LEISURE
 Yogyakarta,Indonesia,Asia,"LEISURE,RELIGIOUS"
 Fukuoka,Japan,Asia,"BUSINESS,LEISURE"
 Hakone,Japan,Asia,LEISURE
@@ -476,10 +493,12 @@ Bangkok,Thailand,Asia,"BUSINESS,MEDICAL,LEISURE"
 Chiang Mai,Thailand,Asia,"LEISURE,MEDICAL"
 Hua Hin,Thailand,Asia,LEISURE
 Kanchanaburi,Thailand,Asia,LEISURE
-Koh Samui,Thailand,Asia,"LEISURE,CRUISE"
+Koh Samui,Thailand,Asia,"LEISURE,CRUISE,SECONDHOME"
 Krabi,Thailand,Asia,"LEISURE,CRUISE"
 Pattaya,Thailand,Asia,LEISURE
+Phi Phi Islands,Thailand,Asia,"LEISURE,CRUISE"
 Phuket,Thailand,Asia,"LEISURE,MEDICAL,CRUISE"
+Railay,Thailand,Asia,LEISURE
 Sukhothai,Thailand,Asia,"LEISURE,RELIGIOUS"
 Da Nang,Vietnam,Asia,"LEISURE,MEDICAL"
 Halong Bay,Vietnam,Asia,"LEISURE,CRUISE"
@@ -492,6 +511,7 @@ Sapa,Vietnam,Asia,LEISURE
 Saranda,Albania,Europe,LEISURE
 Tirana,Albania,Europe,"BUSINESS,LEISURE"
 Graz,Austria,Europe,"BUSINESS,LEISURE"
+Hallstatt,Austria,Europe,LEISURE
 Innsbruck,Austria,Europe,LEISURE
 Linz,Austria,Europe,BUSINESS
 Salzburg,Austria,Europe,LEISURE
@@ -552,8 +572,10 @@ Athens,Greece,Europe,"LEISURE,CRUISE"
 Chania,Greece,Europe,LEISURE
 Corfu,Greece,Europe,"LEISURE,CRUISE"
 Crete,Greece,Europe,"LEISURE,CRUISE"
+Delphi,Greece,Europe,"LEISURE,RELIGIOUS"
 Heraklion,Greece,Europe,"LEISURE,CRUISE"
 Kos,Greece,Europe,"LEISURE,CRUISE"
+Meteora,Greece,Europe,"LEISURE,RELIGIOUS"
 Mykonos,Greece,Europe,"LEISURE,CRUISE"
 Naxos,Greece,Europe,LEISURE
 Paros,Greece,Europe,LEISURE
@@ -619,17 +641,17 @@ St Petersburg,Russia,Europe,"LEISURE,CRUISE"
 Belgrade,Serbia,Europe,"BUSINESS,LEISURE"
 Bratislava,Slovakia,Europe,"BUSINESS,LEISURE"
 Ljubljana,Slovenia,Europe,LEISURE
-Alicante,Spain,Europe,LEISURE
+Alicante,Spain,Europe,"LEISURE,SECONDHOME"
 Barcelona,Spain,Europe,"BUSINESS,LEISURE,CRUISE"
 Bilbao,Spain,Europe,"BUSINESS,LEISURE"
 Granada,Spain,Europe,LEISURE
-Ibiza,Spain,Europe,LEISURE
+Ibiza,Spain,Europe,"LEISURE,SECONDHOME"
 Madrid,Spain,Europe,"BUSINESS,LEISURE"
-Malaga,Spain,Europe,"LEISURE,CRUISE"
-Palma,Spain,Europe,"LEISURE,CRUISE"
+Malaga,Spain,Europe,"LEISURE,CRUISE,SECONDHOME"
+Palma,Spain,Europe,"LEISURE,CRUISE,SECONDHOME"
 San Sebastian,Spain,Europe,LEISURE
 Seville,Spain,Europe,LEISURE
-Valencia,Spain,Europe,"LEISURE,SEAMAN"
+Valencia,Spain,Europe,"LEISURE,SEAMAN,SECONDHOME"
 Zaragoza,Spain,Europe,BUSINESS
 Gothenburg,Sweden,Europe,"BUSINESS,SEAMAN,LEISURE"
 Malmo,Sweden,Europe,"BUSINESS,LEISURE"
@@ -642,6 +664,7 @@ Lucerne,Switzerland,Europe,LEISURE
 St Moritz,Switzerland,Europe,LEISURE
 Zermatt,Switzerland,Europe,LEISURE
 Zurich,Switzerland,Europe,"BUSINESS,LEISURE"
+Edirne,Turkey,Europe,"LEISURE,BUSINESS"
 Istanbul,Turkey,Europe,"BUSINESS,LEISURE,SEAMAN"
 Bath,United Kingdom,Europe,LEISURE
 Belfast,United Kingdom,Europe,"BUSINESS,LEISURE"
@@ -682,7 +705,9 @@ Tel Aviv,Israel,Middle East,"BUSINESS,LEISURE"
 Amman,Jordan,Middle East,"BUSINESS,LEISURE"
 Aqaba,Jordan,Middle East,"LEISURE,CRUISE,SEAMAN"
 Dead Sea,Jordan,Middle East,"LEISURE,MEDICAL"
+Jerash,Jordan,Middle East,LEISURE
 Petra,Jordan,Middle East,LEISURE
+Wadi Musa,Jordan,Middle East,LEISURE
 Wadi Rum,Jordan,Middle East,LEISURE
 Kuwait City,Kuwait,Middle East,"BUSINESS,SEAMAN"
 Baalbek,Lebanon,Middle East,LEISURE
@@ -708,31 +733,38 @@ Taif,Saudi Arabia,Middle East,LEISURE
 Yanbu,Saudi Arabia,Middle East,"BUSINESS,SEAMAN"
 Aleppo,Syria,Middle East,BUSINESS
 Damascus,Syria,Middle East,"BUSINESS,RELIGIOUS"
+Palmyra,Syria,Middle East,LEISURE
 Adana,Turkey,Middle East,BUSINESS
-Alanya,Turkey,Middle East,LEISURE
+Alanya,Turkey,Middle East,"LEISURE,SECONDHOME"
+Alaçatı,Turkey,Middle East,LEISURE
 Ankara,Turkey,Middle East,BUSINESS
-Antalya,Turkey,Middle East,"LEISURE,MEDICAL"
+Antalya,Turkey,Middle East,"LEISURE,MEDICAL,SECONDHOME"
+Balıkesir,Turkey,Middle East,"BUSINESS,LEISURE"
 Belek,Turkey,Middle East,LEISURE
-Bodrum,Turkey,Middle East,"LEISURE,CRUISE"
+Bodrum,Turkey,Middle East,"LEISURE,CRUISE,SECONDHOME"
 Bursa,Turkey,Middle East,"BUSINESS,LEISURE"
 Cappadocia,Turkey,Middle East,LEISURE
 Dalaman,Turkey,Middle East,LEISURE
 Denizli,Turkey,Middle East,LEISURE
 Eskisehir,Turkey,Middle East,BUSINESS
-Fethiye,Turkey,Middle East,"LEISURE,CRUISE"
+Fethiye,Turkey,Middle East,"LEISURE,CRUISE,SECONDHOME"
 Gaziantep,Turkey,Middle East,"BUSINESS,LEISURE"
 Izmir,Turkey,Middle East,"MEDICAL,LEISURE,SEAMAN"
-Kas,Turkey,Middle East,LEISURE
+Kapadokya,Turkey,Middle East,LEISURE
+Kas,Turkey,Middle East,"LEISURE,SECONDHOME"
 Kayseri,Turkey,Middle East,BUSINESS
 Konya,Turkey,Middle East,"RELIGIOUS,BUSINESS"
 Kusadasi,Turkey,Middle East,"LEISURE,CRUISE"
-Marmaris,Turkey,Middle East,"LEISURE,CRUISE"
+Marmaris,Turkey,Middle East,"LEISURE,CRUISE,SECONDHOME"
 Mersin,Turkey,Middle East,"BUSINESS,SEAMAN"
 Pamukkale,Turkey,Middle East,LEISURE
+Sakarya,Turkey,Middle East,BUSINESS
 Samsun,Turkey,Middle East,"BUSINESS,SEAMAN"
-Side,Turkey,Middle East,LEISURE
+Side,Turkey,Middle East,"LEISURE,SECONDHOME"
 Trabzon,Turkey,Middle East,"RELIGIOUS,BUSINESS,SEAMAN"
-Abu Dhabi,United Arab Emirates,Middle East,"BUSINESS,CRUISE"
+Çanakkale,Turkey,Middle East,"LEISURE,RELIGIOUS"
+Çeşme,Turkey,Middle East,"LEISURE,CRUISE"
+Abu Dhabi,United Arab Emirates,Middle East,"BUSINESS,CRUISE,SECONDHOME"
 Al Ain,United Arab Emirates,Middle East,LEISURE
 Dubai,United Arab Emirates,Middle East,"BUSINESS,MEDICAL,CRUISE"
 Fujairah,United Arab Emirates,Middle East,"BUSINESS,SEAMAN"
@@ -750,7 +782,9 @@ Byron Bay,Australia,Oceania,LEISURE
 Cairns,Australia,Oceania,"LEISURE,CRUISE"
 Canberra,Australia,Oceania,BUSINESS
 Darwin,Australia,Oceania,"BUSINESS,LEISURE"
+Fraser Island,Australia,Oceania,LEISURE
 Gold Coast,Australia,Oceania,LEISURE
+Great Barrier Reef,Australia,Oceania,"LEISURE,CRUISE"
 Hobart,Australia,Oceania,"LEISURE,CRUISE"
 Margaret River,Australia,Oceania,LEISURE
 Melbourne,Australia,Oceania,"BUSINESS,LEISURE"
@@ -761,6 +795,7 @@ Sunshine Coast,Australia,Oceania,LEISURE
 Sydney,Australia,Oceania,"BUSINESS,LEISURE,CRUISE"
 Townsville,Australia,Oceania,"LEISURE,SEAMAN"
 Uluru,Australia,Oceania,LEISURE
+Whitsundays,Australia,Oceania,"LEISURE,CRUISE"
 Wollongong,Australia,Oceania,LEISURE
 Aitutaki,Cook Islands,Oceania,"LEISURE,CRUISE"
 Rarotonga,Cook Islands,Oceania,"LEISURE,CRUISE"
@@ -775,6 +810,7 @@ Tahiti,French Polynesia,Oceania,"LEISURE,CRUISE"
 Guam,Guam,Oceania,"BUSINESS,SEAMAN,LEISURE"
 Noumea,New Caledonia,Oceania,"LEISURE,CRUISE"
 Auckland,New Zealand,Oceania,"BUSINESS,LEISURE,CRUISE"
+Bay of Islands,New Zealand,Oceania,LEISURE
 Christchurch,New Zealand,Oceania,"BUSINESS,LEISURE"
 Dunedin,New Zealand,Oceania,"LEISURE,CRUISE"
 Hamilton,New Zealand,Oceania,BUSINESS

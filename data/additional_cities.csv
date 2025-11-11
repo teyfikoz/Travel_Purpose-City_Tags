@@ -1,0 +1,548 @@
+City,Country,Region,Tags
+# Additional Europe Cities
+Malaga,Spain,Europe,LEISURE,CRUISE
+Palma,Spain,Europe,LEISURE,CRUISE
+Ibiza,Spain,Europe,LEISURE
+Alicante,Spain,Europe,LEISURE
+Bilbao,Spain,Europe,BUSINESS,LEISURE
+San Sebastian,Spain,Europe,LEISURE
+Zaragoza,Spain,Europe,BUSINESS
+Nice,France,Europe,LEISURE,CRUISE
+Cannes,France,Europe,LEISURE,CRUISE
+Marseille,France,Europe,BUSINESS,SEAMAN,CRUISE
+Lyon,France,Europe,BUSINESS,LEISURE
+Bordeaux,France,Europe,LEISURE
+Toulouse,France,Europe,BUSINESS,LEISURE
+Strasbourg,France,Europe,BUSINESS,LEISURE
+Nantes,France,Europe,BUSINESS,LEISURE
+Lille,France,Europe,BUSINESS
+Montpellier,France,Europe,LEISURE
+Munich,Germany,Europe,BUSINESS,LEISURE
+Hamburg,Germany,Europe,BUSINESS,SEAMAN,CRUISE
+Berlin,Germany,Europe,BUSINESS,LEISURE
+Cologne,Germany,Europe,BUSINESS,LEISURE
+Stuttgart,Germany,Europe,BUSINESS
+Dusseldorf,Germany,Europe,BUSINESS
+Dresden,Germany,Europe,LEISURE
+Leipzig,Germany,Europe,BUSINESS
+Nuremberg,Germany,Europe,BUSINESS,LEISURE
+Heidelberg,Germany,Europe,LEISURE
+Bremen,Germany,Europe,BUSINESS,SEAMAN
+Hannover,Germany,Europe,BUSINESS
+Rotterdam,Netherlands,Europe,BUSINESS,SEAMAN
+The Hague,Netherlands,Europe,BUSINESS
+Utrecht,Netherlands,Europe,BUSINESS,LEISURE
+Eindhoven,Netherlands,Europe,BUSINESS
+Maastricht,Netherlands,Europe,LEISURE
+Antwerp,Belgium,Europe,BUSINESS,SEAMAN
+Bruges,Belgium,Europe,LEISURE
+Ghent,Belgium,Europe,LEISURE
+Bern,Switzerland,Europe,BUSINESS,LEISURE
+Basel,Switzerland,Europe,BUSINESS,LEISURE
+Lucerne,Switzerland,Europe,LEISURE
+Interlaken,Switzerland,Europe,LEISURE
+Zermatt,Switzerland,Europe,LEISURE
+St Moritz,Switzerland,Europe,LEISURE
+Innsbruck,Austria,Europe,LEISURE
+Salzburg,Austria,Europe,LEISURE
+Graz,Austria,Europe,BUSINESS,LEISURE
+Linz,Austria,Europe,BUSINESS
+Edinburgh,United Kingdom,Europe,LEISURE
+Manchester,United Kingdom,Europe,BUSINESS,LEISURE
+Birmingham,United Kingdom,Europe,BUSINESS
+Liverpool,United Kingdom,Europe,LEISURE,CRUISE
+Southampton,United Kingdom,Europe,CRUISE,SEAMAN
+Bristol,United Kingdom,Europe,BUSINESS,LEISURE
+Glasgow,United Kingdom,Europe,BUSINESS,LEISURE
+Belfast,United Kingdom,Europe,BUSINESS,LEISURE
+Cardiff,United Kingdom,Europe,BUSINESS,LEISURE
+Newcastle,United Kingdom,Europe,BUSINESS
+Leeds,United Kingdom,Europe,BUSINESS
+Cambridge,United Kingdom,Europe,BUSINESS,LEISURE
+Oxford,United Kingdom,Europe,LEISURE
+Bath,United Kingdom,Europe,LEISURE
+York,United Kingdom,Europe,LEISURE
+Galway,Ireland,Europe,LEISURE
+Cork,Ireland,Europe,BUSINESS,LEISURE
+Limerick,Ireland,Europe,LEISURE
+Gothenburg,Sweden,Europe,BUSINESS,SEAMAN,LEISURE
+Malmo,Sweden,Europe,BUSINESS,LEISURE
+Trondheim,Norway,Europe,LEISURE
+Stavanger,Norway,Europe,BUSINESS,LEISURE
+Aarhus,Denmark,Europe,BUSINESS,LEISURE
+Odense,Denmark,Europe,LEISURE
+Turku,Finland,Europe,BUSINESS,SEAMAN
+Tampere,Finland,Europe,BUSINESS
+Akureyri,Iceland,Europe,LEISURE
+Klaipeda,Lithuania,Europe,SEAMAN
+Parnu,Estonia,Europe,LEISURE
+Jurmala,Latvia,Europe,LEISURE
+Gdansk,Poland,Europe,LEISURE,SEAMAN
+Wroclaw,Poland,Europe,BUSINESS,LEISURE
+Poznan,Poland,Europe,BUSINESS,LEISURE
+Lodz,Poland,Europe,BUSINESS
+Katowice,Poland,Europe,BUSINESS
+Zakopane,Poland,Europe,LEISURE
+Brno,Czech Republic,Europe,BUSINESS,LEISURE
+Cesky Krumlov,Czech Republic,Europe,LEISURE
+Karlovy Vary,Czech Republic,Europe,LEISURE,MEDICAL
+Debrecen,Hungary,Europe,BUSINESS,MEDICAL
+Pecs,Hungary,Europe,LEISURE
+Eger,Hungary,Europe,LEISURE
+Timisoara,Romania,Europe,BUSINESS,MEDICAL
+Cluj-Napoca,Romania,Europe,BUSINESS,MEDICAL
+Brasov,Romania,Europe,LEISURE
+Sibiu,Romania,Europe,LEISURE
+Constanta,Romania,Europe,SEAMAN,LEISURE
+Plovdiv,Bulgaria,Europe,LEISURE
+Bansko,Bulgaria,Europe,LEISURE
+Sunny Beach,Bulgaria,Europe,LEISURE
+Golden Sands,Bulgaria,Europe,LEISURE
+Kotor,Montenegro,Europe,LEISURE,CRUISE
+Budva,Montenegro,Europe,LEISURE
+Podgorica,Montenegro,Europe,BUSINESS
+Sarajevo,Bosnia and Herzegovina,Europe,LEISURE
+Mostar,Bosnia and Herzegovina,Europe,LEISURE
+Skopje,North Macedonia,Europe,BUSINESS,LEISURE
+Ohrid,North Macedonia,Europe,LEISURE
+Tirana,Albania,Europe,BUSINESS,LEISURE
+Saranda,Albania,Europe,LEISURE
+Pristina,Kosovo,Europe,BUSINESS
+Thessaloniki,Greece,Europe,BUSINESS,LEISURE,SEAMAN
+Heraklion,Greece,Europe,LEISURE,CRUISE
+Corfu,Greece,Europe,LEISURE,CRUISE
+Zakynthos,Greece,Europe,LEISURE,CRUISE
+Chania,Greece,Europe,LEISURE
+Naxos,Greece,Europe,LEISURE
+Paros,Greece,Europe,LEISURE
+Kos,Greece,Europe,LEISURE,CRUISE
+# More Turkey Cities
+Bursa,Turkey,Middle East,BUSINESS,LEISURE
+Adana,Turkey,Middle East,BUSINESS
+Mersin,Turkey,Middle East,BUSINESS,SEAMAN
+Eskisehir,Turkey,Middle East,BUSINESS
+Kayseri,Turkey,Middle East,BUSINESS
+Samsun,Turkey,Middle East,BUSINESS,SEAMAN
+Denizli,Turkey,Middle East,LEISURE
+Kusadasi,Turkey,Middle East,LEISURE,CRUISE
+Marmaris,Turkey,Middle East,LEISURE,CRUISE
+Alanya,Turkey,Middle East,LEISURE
+Side,Turkey,Middle East,LEISURE
+Belek,Turkey,Middle East,LEISURE
+Kas,Turkey,Middle East,LEISURE
+Dalaman,Turkey,Middle East,LEISURE
+Pamukkale,Turkey,Middle East,LEISURE
+Cappadocia,Turkey,Middle East,LEISURE
+# Additional Asia
+Macau,Macao,Asia,LEISURE,CRUISE
+Shenzhen,China,Asia,BUSINESS,SEAMAN
+Chengdu,China,Asia,BUSINESS,LEISURE
+Xian,China,Asia,LEISURE
+Guilin,China,Asia,LEISURE
+Hangzhou,China,Asia,BUSINESS,LEISURE
+Nanjing,China,Asia,BUSINESS
+Qingdao,China,Asia,BUSINESS,SEAMAN,LEISURE
+Tianjin,China,Asia,BUSINESS,SEAMAN
+Dalian,China,Asia,BUSINESS,SEAMAN
+Xiamen,China,Asia,BUSINESS,LEISURE,SEAMAN
+Sanya,China,Asia,LEISURE,CRUISE
+Hainan,China,Asia,LEISURE,CRUISE
+Nara,Japan,Asia,LEISURE,RELIGIOUS
+Hiroshima,Japan,Asia,BUSINESS,LEISURE
+Nagasaki,Japan,Asia,LEISURE,SEAMAN
+Okinawa,Japan,Asia,LEISURE,CRUISE,SEAMAN
+Hakone,Japan,Asia,LEISURE
+Takayama,Japan,Asia,LEISURE
+Kanazawa,Japan,Asia,LEISURE
+Jeju,South Korea,Asia,LEISURE,CRUISE
+Daegu,South Korea,Asia,BUSINESS,MEDICAL
+Daejeon,South Korea,Asia,BUSINESS
+Gwangju,South Korea,Asia,BUSINESS
+Krabi,Thailand,Asia,LEISURE,CRUISE
+Koh Samui,Thailand,Asia,LEISURE,CRUISE
+Hua Hin,Thailand,Asia,LEISURE
+Kanchanaburi,Thailand,Asia,LEISURE
+Ayutthaya,Thailand,Asia,LEISURE,RELIGIOUS
+Sukhothai,Thailand,Asia,LEISURE,RELIGIOUS
+Langkawi,Malaysia,Asia,LEISURE,CRUISE
+Malacca,Malaysia,Asia,LEISURE
+Kota Kinabalu,Malaysia,Asia,LEISURE,CRUISE
+Kuching,Malaysia,Asia,LEISURE
+Ipoh,Malaysia,Asia,LEISURE
+Lombok,Indonesia,Asia,LEISURE,CRUISE
+Yogyakarta,Indonesia,Asia,LEISURE,RELIGIOUS
+Bandung,Indonesia,Asia,BUSINESS,LEISURE
+Medan,Indonesia,Asia,BUSINESS,SEAMAN
+Batam,Indonesia,Asia,BUSINESS,SEAMAN
+Boracay,Philippines,Asia,LEISURE,CRUISE
+Palawan,Philippines,Asia,LEISURE,CRUISE
+Baguio,Philippines,Asia,LEISURE
+Iloilo,Philippines,Asia,BUSINESS
+Bacolod,Philippines,Asia,BUSINESS
+Hoi An,Vietnam,Asia,LEISURE
+Nha Trang,Vietnam,Asia,LEISURE,CRUISE
+Hue,Vietnam,Asia,LEISURE,RELIGIOUS
+Sapa,Vietnam,Asia,LEISURE
+Halong Bay,Vietnam,Asia,LEISURE,CRUISE
+Phnom Penh,Cambodia,Asia,BUSINESS,LEISURE
+Siem Reap,Cambodia,Asia,LEISURE,RELIGIOUS
+Sihanoukville,Cambodia,Asia,LEISURE,SEAMAN
+Luang Prabang,Laos,Asia,LEISURE,RELIGIOUS
+Vientiane,Laos,Asia,BUSINESS,LEISURE
+Yangon,Myanmar,Asia,BUSINESS,RELIGIOUS
+Mandalay,Myanmar,Asia,LEISURE,RELIGIOUS
+Bagan,Myanmar,Asia,LEISURE,RELIGIOUS
+Inle Lake,Myanmar,Asia,LEISURE
+Pokhara,Nepal,Asia,LEISURE
+Chittagong,Bangladesh,Asia,BUSINESS,SEAMAN
+Galle,Sri Lanka,Asia,LEISURE,CRUISE
+Kandy,Sri Lanka,Asia,LEISURE,RELIGIOUS
+Nuwara Eliya,Sri Lanka,Asia,LEISURE
+Trincomalee,Sri Lanka,Asia,LEISURE,SEAMAN
+Thimphu,Bhutan,Asia,LEISURE,RELIGIOUS
+Paro,Bhutan,Asia,LEISURE,RELIGIOUS
+Male,Maldives,Asia,LEISURE,CRUISE,SEAMAN
+# Additional Middle East
+Ras Al Khaimah,United Arab Emirates,Middle East,LEISURE
+Fujairah,United Arab Emirates,Middle East,BUSINESS,SEAMAN
+Al Ain,United Arab Emirates,Middle East,LEISURE
+Taif,Saudi Arabia,Middle East,LEISURE
+Abha,Saudi Arabia,Middle East,LEISURE
+Al Khobar,Saudi Arabia,Middle East,BUSINESS
+Yanbu,Saudi Arabia,Middle East,BUSINESS,SEAMAN
+Jizan,Saudi Arabia,Middle East,BUSINESS,SEAMAN
+Salalah,Oman,Middle East,LEISURE,SEAMAN
+Sohar,Oman,Middle East,BUSINESS,SEAMAN
+Nizwa,Oman,Middle East,LEISURE
+Eilat,Israel,Middle East,LEISURE,CRUISE
+Nazareth,Israel,Middle East,RELIGIOUS,LEISURE
+Bethlehem,Palestine,Middle East,RELIGIOUS,LEISURE
+Ramallah,Palestine,Middle East,BUSINESS
+Wadi Rum,Jordan,Middle East,LEISURE
+Dead Sea,Jordan,Middle East,LEISURE,MEDICAL
+Byblos,Lebanon,Middle East,LEISURE
+Baalbek,Lebanon,Middle East,LEISURE
+Tripoli,Lebanon,Middle East,BUSINESS,SEAMAN
+Isfahan,Iran,Middle East,LEISURE,RELIGIOUS
+Yazd,Iran,Middle East,LEISURE,RELIGIOUS
+Qom,Iran,Middle East,RELIGIOUS
+Tabriz,Iran,Middle East,BUSINESS,LEISURE
+Kish Island,Iran,Middle East,LEISURE
+Bandar Abbas,Iran,Middle East,BUSINESS,SEAMAN
+# Additional Africa
+Luxor,Egypt,Africa,LEISURE,RELIGIOUS
+Aswan,Egypt,Africa,LEISURE
+Port Said,Egypt,Africa,SEAMAN
+Suez,Egypt,Africa,SEAMAN
+Essaouira,Morocco,Africa,LEISURE
+Agadir,Morocco,Africa,LEISURE
+Chefchaouen,Morocco,Africa,LEISURE
+Ouarzazate,Morocco,Africa,LEISURE
+Sousse,Tunisia,Africa,LEISURE,CRUISE
+Djerba,Tunisia,Africa,LEISURE,CRUISE
+Hammamet,Tunisia,Africa,LEISURE
+Monastir,Tunisia,Africa,LEISURE,CRUISE
+Sfax,Tunisia,Africa,BUSINESS,SEAMAN
+Benghazi,Libya,Africa,BUSINESS,SEAMAN
+Kisumu,Kenya,Africa,BUSINESS
+Eldoret,Kenya,Africa,BUSINESS
+Arusha,Tanzania,Africa,LEISURE
+Dodoma,Tanzania,Africa,BUSINESS
+Mwanza,Tanzania,Africa,BUSINESS,SEAMAN
+Tanga,Tanzania,Africa,SEAMAN
+Dire Dawa,Ethiopia,Africa,BUSINESS
+Mekele,Ethiopia,Africa,BUSINESS
+Entebbe,Uganda,Africa,LEISURE
+Jinja,Uganda,Africa,LEISURE
+Butare,Rwanda,Africa,LEISURE
+Gisenyi,Rwanda,Africa,LEISURE
+Kano,Nigeria,Africa,BUSINESS
+Ibadan,Nigeria,Africa,BUSINESS
+Benin City,Nigeria,Africa,BUSINESS
+Calabar,Nigeria,Africa,SEAMAN
+Warri,Nigeria,Africa,BUSINESS,SEAMAN
+Kumasi,Ghana,Africa,BUSINESS
+Takoradi,Ghana,Africa,BUSINESS,SEAMAN
+Tema,Ghana,Africa,SEAMAN
+Stellenbosch,South Africa,Africa,LEISURE
+Knysna,South Africa,Africa,LEISURE
+Hermanus,South Africa,Africa,LEISURE
+Bloemfontein,South Africa,Africa,BUSINESS
+Nelspruit,South Africa,Africa,LEISURE
+George,South Africa,Africa,LEISURE
+East London,South Africa,Africa,SEAMAN,LEISURE
+Richards Bay,South Africa,Africa,SEAMAN
+Walvis Bay,Namibia,Africa,SEAMAN
+Swakopmund,Namibia,Africa,LEISURE
+Francistown,Botswana,Africa,BUSINESS
+Maun,Botswana,Africa,LEISURE
+Livingstone,Zambia,Africa,LEISURE
+Ndola,Zambia,Africa,BUSINESS
+Kitwe,Zambia,Africa,BUSINESS
+Bulawayo,Zimbabwe,Africa,BUSINESS
+Mutare,Zimbabwe,Africa,BUSINESS
+Gweru,Zimbabwe,Africa,BUSINESS
+Beira,Mozambique,Africa,SEAMAN
+Nacala,Mozambique,Africa,SEAMAN
+Pemba,Mozambique,Africa,SEAMAN
+Quelimane,Mozambique,Africa,SEAMAN
+Vilankulo,Mozambique,Africa,LEISURE
+Toamasina,Madagascar,Africa,SEAMAN
+Nosy Be,Madagascar,Africa,LEISURE,CRUISE
+Port Louis,Mauritius,Africa,SEAMAN,CRUISE,LEISURE
+Mahe,Seychelles,Africa,LEISURE,CRUISE
+Praslin,Seychelles,Africa,LEISURE,CRUISE
+Saint Louis,Senegal,Africa,LEISURE
+Ziguinchor,Senegal,Africa,BUSINESS
+Banjul,Gambia,Africa,BUSINESS,LEISURE
+Freetown,Sierra Leone,Africa,BUSINESS,SEAMAN
+Monrovia,Liberia,Africa,BUSINESS,SEAMAN
+Lome,Togo,Africa,BUSINESS,SEAMAN
+Cotonou,Benin,Africa,BUSINESS,SEAMAN
+Niamey,Niger,Africa,BUSINESS
+Bamako,Mali,Africa,BUSINESS
+Ouagadougou,Burkina Faso,Africa,BUSINESS
+Conakry,Guinea,Africa,BUSINESS,SEAMAN
+# Additional Americas
+Philadelphia,United States,Americas,BUSINESS,MEDICAL,LEISURE
+Dallas,United States,Americas,BUSINESS
+San Antonio,United States,Americas,BUSINESS,LEISURE
+Fort Lauderdale,United States,Americas,LEISURE,CRUISE,SEAMAN
+Tampa,United States,Americas,BUSINESS,CRUISE
+Charlotte,United States,Americas,BUSINESS
+Minneapolis,United States,Americas,BUSINESS
+Detroit,United States,Americas,BUSINESS
+Baltimore,United States,Americas,BUSINESS,SEAMAN
+Cleveland,United States,Americas,BUSINESS
+Pittsburgh,United States,Americas,BUSINESS
+St Louis,United States,Americas,BUSINESS
+Kansas City,United States,Americas,BUSINESS
+Columbus,United States,Americas,BUSINESS
+Indianapolis,United States,Americas,BUSINESS
+Cincinnati,United States,Americas,BUSINESS
+Milwaukee,United States,Americas,BUSINESS
+Sacramento,United States,Americas,BUSINESS
+Raleigh,United States,Americas,BUSINESS
+Salt Lake City,United States,Americas,BUSINESS,LEISURE
+Richmond,United States,Americas,BUSINESS
+Norfolk,United States,Americas,SEAMAN
+Charleston,United States,Americas,LEISURE,SEAMAN
+Savannah,United States,Americas,LEISURE,SEAMAN
+Key West,United States,Americas,LEISURE,CRUISE
+Naples,United States,Americas,LEISURE
+Aspen,United States,Americas,LEISURE
+Vail,United States,Americas,LEISURE
+Park City,United States,Americas,LEISURE
+Santa Fe,United States,Americas,LEISURE
+Sedona,United States,Americas,LEISURE
+Napa Valley,United States,Americas,LEISURE
+Monterey,United States,Americas,LEISURE
+Santa Barbara,United States,Americas,LEISURE
+Carmel,United States,Americas,LEISURE
+Big Sur,United States,Americas,LEISURE
+Juneau,United States,Americas,LEISURE,CRUISE,SEAMAN
+Ketchikan,United States,Americas,LEISURE,CRUISE,SEAMAN
+Sitka,United States,Americas,LEISURE,CRUISE
+Skagway,United States,Americas,LEISURE,CRUISE
+Fairbanks,United States,Americas,LEISURE
+Yellowknife,Canada,Americas,LEISURE
+Whitehorse,Canada,Americas,LEISURE
+Victoria,Canada,Americas,LEISURE,CRUISE
+Whistler,Canada,Americas,LEISURE
+Banff,Canada,Americas,LEISURE
+Jasper,Canada,Americas,LEISURE
+Quebec City,Canada,Americas,LEISURE
+Halifax,Canada,Americas,BUSINESS,SEAMAN,CRUISE
+St John's,Canada,Americas,BUSINESS,SEAMAN
+Winnipeg,Canada,Americas,BUSINESS
+Edmonton,Canada,Americas,BUSINESS
+Regina,Canada,Americas,BUSINESS
+Saskatoon,Canada,Americas,BUSINESS
+Kelowna,Canada,Americas,LEISURE
+Niagara Falls,Canada,Americas,LEISURE
+Puerto Vallarta,Mexico,Americas,LEISURE,CRUISE
+Mazatlan,Mexico,Americas,LEISURE,CRUISE
+Acapulco,Mexico,Americas,LEISURE,CRUISE
+Cozumel,Mexico,Americas,LEISURE,CRUISE
+Tulum,Mexico,Americas,LEISURE
+Merida,Mexico,Americas,BUSINESS,LEISURE
+Oaxaca,Mexico,Americas,LEISURE
+San Miguel de Allende,Mexico,Americas,LEISURE
+Guanajuato,Mexico,Americas,LEISURE
+Puebla,Mexico,Americas,BUSINESS,LEISURE
+Queretaro,Mexico,Americas,BUSINESS
+Leon,Mexico,Americas,BUSINESS
+Veracruz,Mexico,Americas,BUSINESS,SEAMAN
+Tampico,Mexico,Americas,BUSINESS,SEAMAN
+Coatzacoalcos,Mexico,Americas,BUSINESS,SEAMAN
+Lazaro Cardenas,Mexico,Americas,SEAMAN
+Manzanillo,Mexico,Americas,LEISURE,SEAMAN,CRUISE
+Ensenada,Mexico,Americas,LEISURE,CRUISE
+La Paz,Mexico,Americas,LEISURE,CRUISE
+San Jose del Cabo,Mexico,Americas,LEISURE,CRUISE
+Cali,Colombia,Americas,BUSINESS,MEDICAL
+Barranquilla,Colombia,Americas,BUSINESS,SEAMAN
+Santa Marta,Colombia,Americas,LEISURE,CRUISE
+San Andres,Colombia,Americas,LEISURE,CRUISE
+Pereira,Colombia,Americas,BUSINESS,MEDICAL
+Bucaramanga,Colombia,Americas,BUSINESS,MEDICAL
+Quito,Ecuador,Americas,BUSINESS,LEISURE
+Guayaquil,Ecuador,Americas,BUSINESS,SEAMAN
+Cuenca,Ecuador,Americas,LEISURE
+Galapagos,Ecuador,Americas,LEISURE,CRUISE
+Arequipa,Peru,Americas,LEISURE
+Trujillo,Peru,Americas,BUSINESS,LEISURE
+Chiclayo,Peru,Americas,BUSINESS
+Iquitos,Peru,Americas,LEISURE
+Puno,Peru,Americas,LEISURE
+La Paz,Bolivia,Americas,BUSINESS,LEISURE
+Santa Cruz,Bolivia,Americas,BUSINESS
+Cochabamba,Bolivia,Americas,BUSINESS
+Sucre,Bolivia,Americas,LEISURE
+Uyuni,Bolivia,Americas,LEISURE
+Vina del Mar,Chile,Americas,LEISURE,CRUISE
+Concepcion,Chile,Americas,BUSINESS,SEAMAN
+Punta Arenas,Chile,Americas,LEISURE,CRUISE,SEAMAN
+Iquique,Chile,Americas,BUSINESS,SEAMAN
+La Serena,Chile,Americas,LEISURE
+Puerto Varas,Chile,Americas,LEISURE
+Puerto Montt,Chile,Americas,SEAMAN,LEISURE
+Valdivia,Chile,Americas,LEISURE
+Antofagasta,Chile,Americas,BUSINESS,SEAMAN
+Arica,Chile,Americas,BUSINESS,SEAMAN
+Cordoba,Argentina,Americas,BUSINESS,LEISURE
+Rosario,Argentina,Americas,BUSINESS
+Mendoza,Argentina,Americas,LEISURE
+Bariloche,Argentina,Americas,LEISURE
+Ushuaia,Argentina,Americas,LEISURE,CRUISE
+Mar del Plata,Argentina,Americas,LEISURE,CRUISE
+Iguazu Falls,Argentina,Americas,LEISURE
+Salta,Argentina,Americas,LEISURE
+Curitiba,Brazil,Americas,BUSINESS
+Belo Horizonte,Brazil,Americas,BUSINESS,MEDICAL
+Porto Alegre,Brazil,Americas,BUSINESS
+Recife,Brazil,Americas,BUSINESS,LEISURE
+Fortaleza,Brazil,Americas,LEISURE
+Natal,Brazil,Americas,LEISURE
+Maceio,Brazil,Americas,LEISURE
+Florianopolis,Brazil,Americas,LEISURE
+Manaus,Brazil,Americas,BUSINESS,LEISURE
+Belem,Brazil,Americas,BUSINESS,SEAMAN
+Vitoria,Brazil,Americas,BUSINESS,SEAMAN
+Paranagua,Brazil,Americas,SEAMAN
+Itajai,Brazil,Americas,SEAMAN
+Rio Grande,Brazil,Americas,SEAMAN
+Montevideo,Uruguay,Americas,BUSINESS,CRUISE,LEISURE
+Punta del Este,Uruguay,Americas,LEISURE,CRUISE
+Asuncion,Paraguay,Americas,BUSINESS
+Ciudad del Este,Paraguay,Americas,BUSINESS
+Encarnacion,Paraguay,Americas,BUSINESS
+Guatemala City,Guatemala,Americas,BUSINESS
+Antigua,Guatemala,Americas,LEISURE
+Lake Atitlan,Guatemala,Americas,LEISURE
+San Salvador,El Salvador,Americas,BUSINESS
+Tegucigalpa,Honduras,Americas,BUSINESS
+San Pedro Sula,Honduras,Americas,BUSINESS
+Roatan,Honduras,Americas,LEISURE,CRUISE
+Managua,Nicaragua,Americas,BUSINESS
+Granada,Nicaragua,Americas,LEISURE
+San Juan del Sur,Nicaragua,Americas,LEISURE
+Liberia,Costa Rica,Americas,LEISURE
+Manuel Antonio,Costa Rica,Americas,LEISURE
+Tamarindo,Costa Rica,Americas,LEISURE
+Puerto Limon,Costa Rica,Americas,SEAMAN,CRUISE
+Bocas del Toro,Panama,Americas,LEISURE,CRUISE
+David,Panama,Americas,BUSINESS
+Colon,Panama,Americas,SEAMAN
+Belize City,Belize,Americas,LEISURE,CRUISE,SEAMAN
+San Pedro,Belize,Americas,LEISURE,CRUISE
+Caye Caulker,Belize,Americas,LEISURE
+Port-au-Prince,Haiti,Americas,BUSINESS
+Cap-Haitien,Haiti,Americas,LEISURE
+Labadee,Haiti,Americas,LEISURE,CRUISE
+Varadero,Cuba,Americas,LEISURE,CRUISE
+Santiago de Cuba,Cuba,Americas,LEISURE
+Trinidad,Cuba,Americas,LEISURE
+Cienfuegos,Cuba,Americas,LEISURE,CRUISE
+Holguin,Cuba,Americas,LEISURE
+La Romana,Dominican Republic,Americas,LEISURE,CRUISE
+Puerto Plata,Dominican Republic,Americas,LEISURE,CRUISE
+Samana,Dominican Republic,Americas,LEISURE,CRUISE
+Cabarete,Dominican Republic,Americas,LEISURE
+Bayahibe,Dominican Republic,Americas,LEISURE,CRUISE
+Ocho Rios,Jamaica,Americas,LEISURE,CRUISE
+Negril,Jamaica,Americas,LEISURE
+Falmouth,Jamaica,Americas,LEISURE,CRUISE
+George Town,Cayman Islands,Americas,LEISURE,CRUISE
+Freeport,Bahamas,Americas,LEISURE,CRUISE
+Paradise Island,Bahamas,Americas,LEISURE
+Exuma,Bahamas,Americas,LEISURE,CRUISE
+Bridgetown,Barbados,Americas,LEISURE,CRUISE
+St George's,Grenada,Americas,LEISURE,CRUISE
+Castries,Saint Lucia,Americas,LEISURE,CRUISE
+Fort-de-France,Martinique,Americas,LEISURE,CRUISE
+Philipsburg,Sint Maarten,Americas,LEISURE,CRUISE
+Willemstad,Curacao,Americas,LEISURE,CRUISE
+Oranjestad,Aruba,Americas,LEISURE,CRUISE
+Charlotte Amalie,US Virgin Islands,Americas,LEISURE,CRUISE
+Christiansted,US Virgin Islands,Americas,LEISURE,CRUISE
+Road Town,British Virgin Islands,Americas,LEISURE,CRUISE
+Basseterre,Saint Kitts and Nevis,Americas,LEISURE,CRUISE
+St John's,Antigua and Barbuda,Americas,LEISURE,CRUISE
+Roseau,Dominica,Americas,LEISURE,CRUISE
+Kingstown,Saint Vincent and the Grenadines,Americas,LEISURE,CRUISE
+Paramaribo,Suriname,Americas,BUSINESS,SEAMAN
+Cayenne,French Guiana,Americas,BUSINESS
+Georgetown,Guyana,Americas,BUSINESS,SEAMAN
+Caracas,Venezuela,Americas,BUSINESS
+Maracaibo,Venezuela,Americas,BUSINESS,SEAMAN
+Valencia,Venezuela,Americas,BUSINESS,SEAMAN
+Puerto La Cruz,Venezuela,Americas,LEISURE,CRUISE
+Margarita Island,Venezuela,Americas,LEISURE,CRUISE
+# Additional Oceania
+Hobart,Australia,Oceania,LEISURE,CRUISE
+Darwin,Australia,Oceania,BUSINESS,LEISURE
+Canberra,Australia,Oceania,BUSINESS
+Townsville,Australia,Oceania,LEISURE,SEAMAN
+Newcastle,Australia,Oceania,BUSINESS,SEAMAN
+Wollongong,Australia,Oceania,LEISURE
+Sunshine Coast,Australia,Oceania,LEISURE
+Byron Bay,Australia,Oceania,LEISURE
+Airlie Beach,Australia,Oceania,LEISURE,CRUISE
+Port Douglas,Australia,Oceania,LEISURE
+Broome,Australia,Oceania,LEISURE,CRUISE
+Alice Springs,Australia,Oceania,LEISURE
+Uluru,Australia,Oceania,LEISURE
+Margaret River,Australia,Oceania,LEISURE
+Rotorua,New Zealand,Oceania,LEISURE
+Taupo,New Zealand,Oceania,LEISURE
+Dunedin,New Zealand,Oceania,LEISURE,CRUISE
+Napier,New Zealand,Oceania,LEISURE,CRUISE
+Tauranga,New Zealand,Oceania,LEISURE,CRUISE
+Nelson,New Zealand,Oceania,LEISURE
+Wanaka,New Zealand,Oceania,LEISURE
+Hamilton,New Zealand,Oceania,BUSINESS
+Palmerston North,New Zealand,Oceania,BUSINESS
+New Plymouth,New Zealand,Oceania,BUSINESS
+Milford Sound,New Zealand,Oceania,LEISURE,CRUISE
+Suva,Fiji,Oceania,BUSINESS,CRUISE,SEAMAN
+Nadi,Fiji,Oceania,LEISURE,CRUISE
+Denarau,Fiji,Oceania,LEISURE,CRUISE
+Port Vila,Vanuatu,Oceania,LEISURE,CRUISE
+Luganville,Vanuatu,Oceania,LEISURE,SEAMAN
+Honiara,Solomon Islands,Oceania,BUSINESS,SEAMAN
+Port Moresby,Papua New Guinea,Oceania,BUSINESS,SEAMAN
+Lae,Papua New Guinea,Oceania,BUSINESS,SEAMAN
+Rabaul,Papua New Guinea,Oceania,LEISURE,SEAMAN
+Noumea,New Caledonia,Oceania,LEISURE,CRUISE
+Apia,Samoa,Oceania,LEISURE,CRUISE
+Pago Pago,American Samoa,Oceania,LEISURE,SEAMAN,CRUISE
+Nuku'alofa,Tonga,Oceania,LEISURE,CRUISE
+Bora Bora,French Polynesia,Oceania,LEISURE,CRUISE
+Moorea,French Polynesia,Oceania,LEISURE,CRUISE
+Tahiti,French Polynesia,Oceania,LEISURE,CRUISE
+Rarotonga,Cook Islands,Oceania,LEISURE,CRUISE
+Aitutaki,Cook Islands,Oceania,LEISURE,CRUISE
+Guam,Guam,Oceania,BUSINESS,SEAMAN,LEISURE
+Saipan,Northern Mariana Islands,Oceania,LEISURE,SEAMAN
+Palau,Palau,Oceania,LEISURE,CRUISE

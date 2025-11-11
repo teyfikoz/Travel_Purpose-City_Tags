@@ -1,0 +1,300 @@
+City,Country,Region,Tags
+# Europe (136 cities target)
+London,United Kingdom,Europe,BUSINESS,LEISURE,CRUISE
+Paris,France,Europe,BUSINESS,LEISURE,CRUISE
+Frankfurt,Germany,Europe,BUSINESS,LEISURE
+Amsterdam,Netherlands,Europe,BUSINESS,LEISURE,CRUISE
+Brussels,Belgium,Europe,BUSINESS
+Zurich,Switzerland,Europe,BUSINESS,LEISURE
+Geneva,Switzerland,Europe,BUSINESS
+Milan,Italy,Europe,BUSINESS,LEISURE
+Rome,Italy,Europe,BUSINESS,LEISURE,RELIGIOUS
+Venice,Italy,Europe,LEISURE,CRUISE
+Florence,Italy,Europe,LEISURE
+Naples,Italy,Europe,LEISURE,CRUISE,SEAMAN
+Barcelona,Spain,Europe,BUSINESS,LEISURE,CRUISE
+Madrid,Spain,Europe,BUSINESS,LEISURE
+Valencia,Spain,Europe,LEISURE,SEAMAN
+Seville,Spain,Europe,LEISURE
+Granada,Spain,Europe,LEISURE
+Lisbon,Portugal,Europe,BUSINESS,LEISURE,CRUISE
+Porto,Portugal,Europe,LEISURE,CRUISE
+Vienna,Austria,Europe,BUSINESS,LEISURE
+Prague,Czech Republic,Europe,LEISURE
+Budapest,Hungary,Europe,LEISURE,MEDICAL
+Warsaw,Poland,Europe,BUSINESS,MEDICAL
+Krakow,Poland,Europe,LEISURE,RELIGIOUS
+Athens,Greece,Europe,LEISURE,CRUISE
+Santorini,Greece,Europe,LEISURE,CRUISE
+Mykonos,Greece,Europe,LEISURE,CRUISE
+Rhodes,Greece,Europe,LEISURE,CRUISE
+Crete,Greece,Europe,LEISURE,CRUISE
+Dublin,Ireland,Europe,BUSINESS,LEISURE
+Copenhagen,Denmark,Europe,BUSINESS,LEISURE,CRUISE
+Stockholm,Sweden,Europe,BUSINESS,LEISURE,CRUISE
+Oslo,Norway,Europe,BUSINESS,LEISURE,CRUISE
+Bergen,Norway,Europe,LEISURE,CRUISE
+Helsinki,Finland,Europe,BUSINESS,LEISURE,CRUISE
+Reykjavik,Iceland,Europe,LEISURE,CRUISE
+Tallinn,Estonia,Europe,LEISURE,CRUISE
+Riga,Latvia,Europe,LEISURE,CRUISE
+Vilnius,Lithuania,Europe,LEISURE
+Moscow,Russia,Europe,BUSINESS,LEISURE
+St Petersburg,Russia,Europe,LEISURE,CRUISE
+Istanbul,Turkey,Europe,BUSINESS,LEISURE,SEAMAN
+Ankara,Turkey,Middle East,BUSINESS
+Antalya,Turkey,Middle East,LEISURE,MEDICAL
+Izmir,Turkey,Middle East,MEDICAL,LEISURE,SEAMAN
+Trabzon,Turkey,Middle East,RELIGIOUS,BUSINESS,SEAMAN
+Konya,Turkey,Middle East,RELIGIOUS,BUSINESS
+Gaziantep,Turkey,Middle East,BUSINESS,LEISURE
+Bodrum,Turkey,Middle East,LEISURE,CRUISE
+Fethiye,Turkey,Middle East,LEISURE,CRUISE
+Split,Croatia,Europe,LEISURE,CRUISE
+Dubrovnik,Croatia,Europe,LEISURE,CRUISE
+Zagreb,Croatia,Europe,BUSINESS,LEISURE
+Belgrade,Serbia,Europe,BUSINESS,LEISURE
+Bucharest,Romania,Europe,BUSINESS,MEDICAL
+Sofia,Bulgaria,Europe,BUSINESS,LEISURE
+Varna,Bulgaria,Europe,LEISURE,SEAMAN
+Burgas,Bulgaria,Europe,LEISURE,SEAMAN
+Ljubljana,Slovenia,Europe,LEISURE
+Bratislava,Slovakia,Europe,BUSINESS,LEISURE
+Valletta,Malta,Europe,LEISURE,CRUISE
+Nice,France,Europe,LEISURE,CRUISE
+Cannes,France,Europe,LEISURE,CRUISE
+Monaco,Monaco,Europe,LEISURE,CRUISE
+Marseille,France,Europe,BUSINESS,SEAMAN,CRUISE
+Lyon,France,Europe,BUSINESS,LEISURE
+Bordeaux,France,Europe,LEISURE
+Toulouse,France,Europe,BUSINESS,LEISURE
+Munich,Germany,Europe,BUSINESS,LEISURE
+Hamburg,Germany,Europe,BUSINESS,SEAMAN,CRUISE
+Berlin,Germany,Europe,BUSINESS,LEISURE
+Cologne,Germany,Europe,BUSINESS,LEISURE
+Stuttgart,Germany,Europe,BUSINESS
+Dusseldorf,Germany,Europe,BUSINESS
+Rotterdam,Netherlands,Europe,BUSINESS,SEAMAN
+The Hague,Netherlands,Europe,BUSINESS
+Antwerp,Belgium,Europe,BUSINESS,SEAMAN
+Bruges,Belgium,Europe,LEISURE
+Zurich,Switzerland,Europe,BUSINESS,LEISURE
+Bern,Switzerland,Europe,BUSINESS,LEISURE
+Basel,Switzerland,Europe,BUSINESS,LEISURE
+Lucerne,Switzerland,Europe,LEISURE
+Edinburgh,United Kingdom,Europe,LEISURE
+Manchester,United Kingdom,Europe,BUSINESS,LEISURE
+Birmingham,United Kingdom,Europe,BUSINESS
+Liverpool,United Kingdom,Europe,LEISURE,CRUISE
+Southampton,United Kingdom,Europe,CRUISE,SEAMAN
+Bristol,United Kingdom,Europe,BUSINESS,LEISURE
+Glasgow,United Kingdom,Europe,BUSINESS,LEISURE
+Belfast,United Kingdom,Europe,BUSINESS,LEISURE
+Cardiff,United Kingdom,Europe,BUSINESS,LEISURE
+# Asia (53 cities target)
+Tokyo,Japan,Asia,BUSINESS,LEISURE
+Osaka,Japan,Asia,BUSINESS,LEISURE
+Kyoto,Japan,Asia,LEISURE,RELIGIOUS
+Nagoya,Japan,Asia,BUSINESS
+Fukuoka,Japan,Asia,BUSINESS,LEISURE
+Sapporo,Japan,Asia,LEISURE
+Yokohama,Japan,Asia,BUSINESS,SEAMAN
+Kobe,Japan,Asia,BUSINESS,SEAMAN
+Seoul,South Korea,Asia,BUSINESS,MEDICAL,LEISURE
+Busan,South Korea,Asia,BUSINESS,SEAMAN,MEDICAL
+Incheon,South Korea,Asia,BUSINESS,SEAMAN
+Beijing,China,Asia,BUSINESS,LEISURE
+Shanghai,China,Asia,BUSINESS,SEAMAN,LEISURE
+Hong Kong,Hong Kong,Asia,BUSINESS,SEAMAN,LEISURE
+Shenzhen,China,Asia,BUSINESS
+Guangzhou,China,Asia,BUSINESS,SEAMAN
+Singapore,Singapore,Asia,BUSINESS,MEDICAL,SEAMAN
+Bangkok,Thailand,Asia,BUSINESS,MEDICAL,LEISURE
+Phuket,Thailand,Asia,LEISURE,MEDICAL,CRUISE
+Chiang Mai,Thailand,Asia,LEISURE,MEDICAL
+Pattaya,Thailand,Asia,LEISURE
+Kuala Lumpur,Malaysia,Asia,BUSINESS,MEDICAL,LEISURE
+Penang,Malaysia,Asia,LEISURE,MEDICAL,SEAMAN
+Johor Bahru,Malaysia,Asia,BUSINESS,MEDICAL
+Jakarta,Indonesia,Asia,BUSINESS,SEAMAN
+Bali,Indonesia,Asia,LEISURE,CRUISE
+Surabaya,Indonesia,Asia,BUSINESS,SEAMAN
+Manila,Philippines,Asia,BUSINESS,SEAMAN,MEDICAL
+Cebu,Philippines,Asia,LEISURE,MEDICAL,SEAMAN
+Davao,Philippines,Asia,BUSINESS,SEAMAN
+Hanoi,Vietnam,Asia,BUSINESS,MEDICAL,LEISURE
+Ho Chi Minh,Vietnam,Asia,BUSINESS,MEDICAL,SEAMAN
+Da Nang,Vietnam,Asia,LEISURE,MEDICAL
+Mumbai,India,Asia,BUSINESS,MEDICAL,SEAMAN
+Delhi,India,Asia,BUSINESS,MEDICAL,LEISURE
+Bangalore,India,Asia,BUSINESS,MEDICAL
+Chennai,India,Asia,BUSINESS,MEDICAL,SEAMAN
+Kolkata,India,Asia,BUSINESS,SEAMAN
+Hyderabad,India,Asia,BUSINESS,MEDICAL
+Pune,India,Asia,BUSINESS,MEDICAL
+Varanasi,India,Asia,RELIGIOUS,LEISURE
+Amritsar,India,Asia,RELIGIOUS,LEISURE
+Jaipur,India,Asia,LEISURE
+Goa,India,Asia,LEISURE,CRUISE
+Colombo,Sri Lanka,Asia,BUSINESS,SEAMAN,MEDICAL
+Kathmandu,Nepal,Asia,LEISURE,RELIGIOUS
+Dhaka,Bangladesh,Asia,BUSINESS,MEDICAL
+Karachi,Pakistan,Asia,BUSINESS,SEAMAN
+Lahore,Pakistan,Asia,BUSINESS,LEISURE
+Islamabad,Pakistan,Asia,BUSINESS
+Taipei,Taiwan,Asia,BUSINESS,MEDICAL,LEISURE
+Kaohsiung,Taiwan,Asia,BUSINESS,SEAMAN
+Macao,Macao,Asia,LEISURE
+Ulaanbaatar,Mongolia,Asia,LEISURE
+# Middle East (34 cities target)
+Dubai,United Arab Emirates,Middle East,BUSINESS,MEDICAL,CRUISE
+Abu Dhabi,United Arab Emirates,Middle East,BUSINESS,CRUISE
+Sharjah,United Arab Emirates,Middle East,BUSINESS
+Riyadh,Saudi Arabia,Middle East,BUSINESS,MEDICAL
+Jeddah,Saudi Arabia,Middle East,BUSINESS,RELIGIOUS,SEAMAN
+Mecca,Saudi Arabia,Middle East,RELIGIOUS
+Medina,Saudi Arabia,Middle East,RELIGIOUS
+Dammam,Saudi Arabia,Middle East,BUSINESS,SEAMAN
+Doha,Qatar,Middle East,BUSINESS,CRUISE
+Kuwait City,Kuwait,Middle East,BUSINESS,SEAMAN
+Manama,Bahrain,Middle East,BUSINESS,MEDICAL
+Muscat,Oman,Middle East,BUSINESS,CRUISE,LEISURE
+Tel Aviv,Israel,Middle East,BUSINESS,LEISURE
+Jerusalem,Israel,Middle East,RELIGIOUS,LEISURE
+Haifa,Israel,Middle East,BUSINESS,SEAMAN
+Amman,Jordan,Middle East,BUSINESS,LEISURE
+Petra,Jordan,Middle East,LEISURE
+Aqaba,Jordan,Middle East,LEISURE,CRUISE,SEAMAN
+Beirut,Lebanon,Middle East,BUSINESS,LEISURE
+Tehran,Iran,Middle East,BUSINESS
+Mashhad,Iran,Middle East,RELIGIOUS
+Shiraz,Iran,Middle East,LEISURE,RELIGIOUS
+Baghdad,Iraq,Middle East,BUSINESS
+Basra,Iraq,Middle East,BUSINESS,SEAMAN
+Erbil,Iraq,Middle East,BUSINESS
+Najaf,Iraq,Middle East,RELIGIOUS
+Karbala,Iraq,Middle East,RELIGIOUS
+Sana'a,Yemen,Middle East,BUSINESS
+Aden,Yemen,Middle East,BUSINESS,SEAMAN
+Damascus,Syria,Middle East,BUSINESS,RELIGIOUS
+Aleppo,Syria,Middle East,BUSINESS
+# Africa (50 cities target)
+Cairo,Egypt,Africa,BUSINESS,LEISURE,MEDICAL
+Alexandria,Egypt,Africa,BUSINESS,SEAMAN,LEISURE
+Sharm el-Sheikh,Egypt,Africa,LEISURE,CRUISE
+Hurghada,Egypt,Africa,LEISURE,CRUISE
+Marrakech,Morocco,Africa,LEISURE,MEDICAL
+Casablanca,Morocco,Africa,BUSINESS,MEDICAL,SEAMAN
+Tangier,Morocco,Africa,BUSINESS,SEAMAN
+Fez,Morocco,Africa,LEISURE
+Rabat,Morocco,Africa,BUSINESS
+Tunis,Tunisia,Africa,BUSINESS,MEDICAL,LEISURE
+Algiers,Algeria,Africa,BUSINESS
+Tripoli,Libya,Africa,BUSINESS,SEAMAN
+Nairobi,Kenya,Africa,BUSINESS,MEDICAL,LEISURE
+Mombasa,Kenya,Africa,LEISURE,SEAMAN,CRUISE
+Dar es Salaam,Tanzania,Africa,BUSINESS,SEAMAN
+Zanzibar,Tanzania,Africa,LEISURE,CRUISE
+Addis Ababa,Ethiopia,Africa,BUSINESS,MEDICAL
+Kampala,Uganda,Africa,BUSINESS,MEDICAL
+Kigali,Rwanda,Africa,BUSINESS,MEDICAL
+Lagos,Nigeria,Africa,BUSINESS,MEDICAL,SEAMAN
+Abuja,Nigeria,Africa,BUSINESS
+Port Harcourt,Nigeria,Africa,BUSINESS,SEAMAN
+Accra,Ghana,Africa,BUSINESS,MEDICAL
+Cape Town,South Africa,Africa,BUSINESS,LEISURE,CRUISE
+Johannesburg,South Africa,Africa,BUSINESS,MEDICAL,LEISURE
+Durban,South Africa,Africa,BUSINESS,SEAMAN,LEISURE
+Pretoria,South Africa,Africa,BUSINESS
+Port Elizabeth,South Africa,Africa,LEISURE,SEAMAN
+Windhoek,Namibia,Africa,LEISURE
+Gaborone,Botswana,Africa,BUSINESS,LEISURE
+Lusaka,Zambia,Africa,BUSINESS
+Harare,Zimbabwe,Africa,BUSINESS
+Victoria Falls,Zimbabwe,Africa,LEISURE
+Maputo,Mozambique,Africa,BUSINESS,SEAMAN
+Antananarivo,Madagascar,Africa,LEISURE
+Mauritius,Mauritius,Africa,LEISURE,CRUISE,MEDICAL
+Seychelles,Seychelles,Africa,LEISURE,CRUISE
+Dakar,Senegal,Africa,BUSINESS,SEAMAN
+Abidjan,Ivory Coast,Africa,BUSINESS,SEAMAN
+Libreville,Gabon,Africa,BUSINESS,SEAMAN
+Douala,Cameroon,Africa,BUSINESS,SEAMAN
+Luanda,Angola,Africa,BUSINESS,SEAMAN
+Kinshasa,Congo,Africa,BUSINESS
+Khartoum,Sudan,Africa,BUSINESS
+Djibouti,Djibouti,Africa,BUSINESS,SEAMAN
+# Americas (40 cities target)
+New York,United States,Americas,BUSINESS,LEISURE,CRUISE
+Los Angeles,United States,Americas,BUSINESS,LEISURE,MEDICAL
+San Francisco,United States,Americas,BUSINESS,LEISURE
+Chicago,United States,Americas,BUSINESS,LEISURE
+Miami,United States,Americas,BUSINESS,LEISURE,CRUISE
+Houston,United States,Americas,BUSINESS,SEAMAN
+Boston,United States,Americas,BUSINESS,MEDICAL,LEISURE
+Seattle,United States,Americas,BUSINESS,SEAMAN,CRUISE
+Washington DC,United States,Americas,BUSINESS,LEISURE
+Las Vegas,United States,Americas,LEISURE
+Orlando,United States,Americas,LEISURE
+Atlanta,United States,Americas,BUSINESS
+Denver,United States,Americas,BUSINESS,LEISURE
+Phoenix,United States,Americas,BUSINESS,MEDICAL
+San Diego,United States,Americas,BUSINESS,LEISURE,SEAMAN
+Portland,United States,Americas,BUSINESS,LEISURE
+Austin,United States,Americas,BUSINESS,LEISURE
+Nashville,United States,Americas,LEISURE
+New Orleans,United States,Americas,LEISURE,CRUISE
+Honolulu,United States,Americas,LEISURE,CRUISE,SEAMAN
+Anchorage,United States,Americas,LEISURE,CRUISE
+Toronto,Canada,Americas,BUSINESS,MEDICAL,LEISURE
+Vancouver,Canada,Americas,BUSINESS,LEISURE,CRUISE
+Montreal,Canada,Americas,BUSINESS,LEISURE
+Calgary,Canada,Americas,BUSINESS,LEISURE
+Ottawa,Canada,Americas,BUSINESS
+Mexico City,Mexico,Americas,BUSINESS,MEDICAL,LEISURE
+Cancun,Mexico,Americas,LEISURE,CRUISE
+Playa del Carmen,Mexico,Americas,LEISURE
+Cabo San Lucas,Mexico,Americas,LEISURE,CRUISE
+Guadalajara,Mexico,Americas,BUSINESS,MEDICAL
+Monterrey,Mexico,Americas,BUSINESS
+Tijuana,Mexico,Americas,BUSINESS,MEDICAL
+Bogota,Colombia,Americas,BUSINESS,MEDICAL,LEISURE
+Medellin,Colombia,Americas,BUSINESS,MEDICAL,LEISURE
+Cartagena,Colombia,Americas,LEISURE,CRUISE
+Lima,Peru,Americas,BUSINESS,LEISURE,MEDICAL
+Cusco,Peru,Americas,LEISURE
+Santiago,Chile,Americas,BUSINESS,MEDICAL,LEISURE
+Valparaiso,Chile,Americas,LEISURE,CRUISE
+Buenos Aires,Argentina,Americas,BUSINESS,MEDICAL,LEISURE
+Rio de Janeiro,Brazil,Americas,LEISURE,CRUISE
+Sao Paulo,Brazil,Americas,BUSINESS,MEDICAL
+Brasilia,Brazil,Americas,BUSINESS
+Salvador,Brazil,Americas,LEISURE,CRUISE
+Santos,Brazil,Americas,BUSINESS,SEAMAN
+Panama City,Panama,Americas,BUSINESS,SEAMAN,CRUISE
+San Jose,Costa Rica,Americas,BUSINESS,MEDICAL,LEISURE
+Havana,Cuba,Americas,LEISURE,CRUISE,MEDICAL
+Santo Domingo,Dominican Republic,Americas,LEISURE,CRUISE,MEDICAL
+Punta Cana,Dominican Republic,Americas,LEISURE,CRUISE
+Kingston,Jamaica,Americas,LEISURE,CRUISE
+Montego Bay,Jamaica,Americas,LEISURE,CRUISE
+Nassau,Bahamas,Americas,LEISURE,CRUISE
+San Juan,Puerto Rico,Americas,LEISURE,CRUISE
+Port of Spain,Trinidad and Tobago,Americas,BUSINESS,SEAMAN,CRUISE
+# Oceania (11 cities target)
+Sydney,Australia,Oceania,BUSINESS,LEISURE,CRUISE
+Melbourne,Australia,Oceania,BUSINESS,LEISURE
+Brisbane,Australia,Oceania,BUSINESS,LEISURE
+Perth,Australia,Oceania,BUSINESS,LEISURE
+Adelaide,Australia,Oceania,BUSINESS,LEISURE
+Gold Coast,Australia,Oceania,LEISURE
+Cairns,Australia,Oceania,LEISURE,CRUISE
+Auckland,New Zealand,Oceania,BUSINESS,LEISURE,CRUISE
+Wellington,New Zealand,Oceania,BUSINESS,LEISURE
+Christchurch,New Zealand,Oceania,BUSINESS,LEISURE
+Queenstown,New Zealand,Oceania,LEISURE
+Fiji,Fiji,Oceania,LEISURE,CRUISE
+Papeete,French Polynesia,Oceania,LEISURE,CRUISE
+Port Moresby,Papua New Guinea,Oceania,BUSINESS,SEAMAN
+Noumea,New Caledonia,Oceania,LEISURE,CRUISE
+Apia,Samoa,Oceania,LEISURE,CRUISE

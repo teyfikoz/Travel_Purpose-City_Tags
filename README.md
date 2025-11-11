@@ -6,8 +6,11 @@
 
 A production-grade Python library for classifying world cities by travel purpose using multi-source data from public travel platforms and knowledge bases.
 
+**NEW in v0.2.0:** 🎉 **Simple City Tags** - Lightweight classification system with 800 cities and 7 core tags!
+
 ## Features
 
+- **🏷️ Simple City Tags (NEW)**: Lightweight system with 800 cities classified by 7 core tags (BUSINESS, LEISURE, SEAMAN, CRUISE, MEDICAL, RELIGIOUS, SECONDHOME)
 - **Multi-Label Classification**: Cities can have multiple travel purposes (e.g., Business + Culture + Transit)
 - **Rich Ontology**: 12 main categories and 70+ subcategories covering all travel purposes
 - **Multi-Source Data**: Integrates data from Wikidata, Booking.com, Agoda, Trivago, Kayak, Trip.com, and Skyscanner
@@ -24,7 +27,47 @@ pip install travelpurpose
 
 ## Quick Start
 
-### Python API
+### 🏷️ Simple City Tags (Recommended for most users)
+
+```python
+from travelpurpose.simple_tags import SimpleCityTags
+
+# Initialize
+city_tags = SimpleCityTags()
+city_tags.load()
+
+# Get tags for a city
+tags = city_tags.get_city_tags("Bangkok")
+print(tags)  # ['BUSINESS', 'MEDICAL', 'LEISURE']
+
+tags = city_tags.get_city_tags("Mecca")
+print(tags)  # ['RELIGIOUS']
+
+# Search cities by tag
+medical_cities = city_tags.search_by_tag("MEDICAL")
+print(f"Found {len(medical_cities)} medical tourism destinations")
+
+# Get statistics
+stats = city_tags.get_statistics()
+print(f"Total cities: {stats['total_cities']}")
+print(f"Regions: {stats['regions']}")
+print(f"Tag usage: {stats['tag_usage']}")
+```
+
+**Simple Tags System:**
+- **BUSINESS**: Business hubs, financial centers, MICE
+- **LEISURE**: Tourist destinations, culture, beaches
+- **SEAMAN**: Major ports, crew change facilities
+- **CRUISE**: Cruise destinations and ports of call
+- **MEDICAL**: Medical tourism hubs
+- **RELIGIOUS**: Pilgrimage sites
+- **SECONDHOME**: Second home destinations (future)
+
+**Database:** 800 cities | **Regions:** 6 continents | **Max tags per city:** 3
+
+See [CITY_TAGS_STATS.md](CITY_TAGS_STATS.md) for complete statistics and coverage details.
+
+### Advanced: Full Ontology System
 
 ```python
 from travelpurpose import predict_purpose, tags

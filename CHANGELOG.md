@@ -1,0 +1,115 @@
+# Changelog
+
+All notable changes to TravelPurpose will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+## [0.1.0] - 2025-11-11
+
+### Added
+- Initial release of TravelPurpose library
+- Multi-label city classification with 12 main categories and 70+ subcategories
+- Integration with Wikidata for canonical city data
+- Public data harvesters for Booking.com, Agoda, Trivago, Kayak, Trip.com, Skyscanner
+- Hybrid rule-based classifier with confidence scoring
+- Python API: `predict_purpose()`, `tags()`, `search()`, `load()`
+- Command-line interface with `tpurpose` command
+- Comprehensive ontology system with YAML configuration
+- NBD purpose mapping support
+- Data pipeline for building datasets
+- Rate limiting and caching infrastructure
+- robots.txt compliance
+- Full test suite with pytest
+- Documentation: README, API reference, examples
+- GitHub Actions CI/CD workflows
+- PyPI package configuration
+
+### Data Sources
+- Wikidata SPARQL endpoint for cities >100K population
+- Wikipedia categories for cultural information
+- UNESCO World Heritage sites from Wikidata
+- Public structured data (JSON-LD) from travel platforms
+- Public meta tags and headings from city pages
+
+### Compliance
+- Respects robots.txt on all platforms
+- Rate limiting (default 1.5s between requests)
+- HTTP caching (24-hour TTL)
+- No authentication or private APIs used
+- User-Agent identification
+- Exponential backoff for retries
+
+### Documentation
+- Comprehensive README with quickstart
+- API documentation with examples
+- CONTRIBUTING guidelines
+- CODE_OF_CONDUCT
+- DATASET_CARD with provenance
+- CITATION.cff for academic use
+- Jupyter notebook examples
+
+## [0.0.1] - 2025-11-10
+
+### Added
+- Project initialization
+- Basic package structure
+
+---
+
+## Release Notes
+
+### Version 0.1.0
+
+This is the first production-ready release of TravelPurpose. The library provides:
+
+**Core Features:**
+- Classify cities across 12 main travel purpose categories
+- 70+ specialized subcategories
+- Multi-source data integration (7 public sources)
+- Confidence scoring for all predictions
+- Python API and CLI
+
+**Data Quality:**
+- Coverage: Cities with population >100K
+- Multi-source validation
+- Weighted aggregation
+- Source attribution
+
+**Production Ready:**
+- Comprehensive tests (>80% coverage)
+- Type hints throughout
+- Logging and error handling
+- CI/CD with GitHub Actions
+- PyPI distribution
+
+**Ethical Data Collection:**
+- Fully compliant with platform ToS
+- Respects robots.txt
+- Rate limiting and caching
+- No PII collection
+- Transparent source attribution
+
+### Known Limitations
+
+- Dataset must be built locally via pipeline (not included in package)
+- Limited coverage for cities <100K population
+- Tag quality varies by source availability
+- English language focus (limited multilingual support)
+- Requires network access for live harvesting
+
+### Future Roadmap
+
+- [ ] Pre-built dataset for major cities (>1M population)
+- [ ] Multilingual tag normalization
+- [ ] Embedding-based similarity search
+- [ ] Real-time confidence calibration
+- [ ] Additional data sources (TripAdvisor, Lonely Planet)
+- [ ] API endpoint deployment option
+- [ ] Dashboard for dataset exploration
+
+### Upgrade Notes
+
+N/A (first release)

@@ -1,0 +1,4 @@
+# This directory will contain generated city data files
+# Run `tpurpose rebuild` or `python scripts/pipeline.py` to generate:
+# - cities.parquet
+# - cities.json

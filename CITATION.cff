@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "TravelPurpose: City Travel Purpose Classification Library"
+abstract: "A production-grade Python library for classifying world cities by travel purpose using multi-source data from public travel platforms and knowledge bases."
+authors:
+  - name: "Travel Purpose Contributors"
+repository-code: "https://github.com/teyfikoz/Travel_Purpose-City_Tags"
+url: "https://github.com/teyfikoz/Travel_Purpose-City_Tags"
+license: MIT
+version: 0.1.0
+date-released: 2025-11-11
+keywords:
+  - travel
+  - city-classification
+  - tourism
+  - data-engineering
+  - travel-purpose
+  - multi-label-classification
+  - knowledge-base
+  - travel-platforms

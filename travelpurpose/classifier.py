@@ -51,11 +51,15 @@ def load():
 
     # Load ontology
     _ONTOLOGY = load_ontology()
-    logger.info(f"Loaded ontology with {len(_ONTOLOGY.get('main_categories', []))} main categories")
+    logger.info(
+        f"Loaded ontology with {len(_ONTOLOGY.get('main_categories', []))} main categories"
+    )
 
     # Load NBD mapping
     _NBD_MAPPING = load_nbd_mapping()
-    logger.info(f"Loaded NBD mapping with {len(_NBD_MAPPING.get('nbd_to_main', {}))} purposes")
+    logger.info(
+        f"Loaded NBD mapping with {len(_NBD_MAPPING.get('nbd_to_main', {}))} purposes"
+    )
 
     # Load cities data
     _CITIES_DF = load_cities_data()
@@ -114,12 +118,16 @@ def predict_purpose(city_name: str, use_cache: bool = True) -> dict:
             # Check if already classified
             if "main_categories" in city_row and pd.notna(city_row["main_categories"]):
                 return {
-                    "main": city_row["main_categories"]
-                    if isinstance(city_row["main_categories"], list)
-                    else [city_row["main_categories"]],
-                    "sub": city_row.get("subcategories", [])
-                    if isinstance(city_row.get("subcategories"), list)
-                    else [],
+                    "main": (
+                        city_row["main_categories"]
+                        if isinstance(city_row["main_categories"], list)
+                        else [city_row["main_categories"]]
+                    ),
+                    "sub": (
+                        city_row.get("subcategories", [])
+                        if isinstance(city_row.get("subcategories"), list)
+                        else []
+                    ),
                     "confidence": city_row.get("confidence", 0.8),
                 }
 
@@ -217,7 +225,10 @@ def search(query: str) -> list[dict]:
 
     # Search in name and country
     matches = _CITIES_DF[
-        _CITIES_DF["name"].str.lower().apply(normalize_city_name).str.contains(query_norm)
+        _CITIES_DF["name"]
+        .str.lower()
+        .apply(normalize_city_name)
+        .str.contains(query_norm)
         | _CITIES_DF.get("country", pd.Series(dtype=str))
         .str.lower()
         .str.contains(query_norm, na=False)

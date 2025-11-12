@@ -96,39 +96,41 @@ class RestCountriesClient(BaseHarvester):
 
         # Regional tags
         if region == "Europe":
-            tags.append({
-                "tag": "european",
-                "source": "restcountries",
-                "evidence_type": "region"
-            })
+            tags.append(
+                {
+                    "tag": "european",
+                    "source": "restcountries",
+                    "evidence_type": "region",
+                }
+            )
 
         if region == "Asia":
-            tags.append({
-                "tag": "asian",
-                "source": "restcountries",
-                "evidence_type": "region"
-            })
+            tags.append(
+                {"tag": "asian", "source": "restcountries", "evidence_type": "region"}
+            )
 
         if region == "Africa":
-            tags.append({
-                "tag": "african",
-                "source": "restcountries",
-                "evidence_type": "region"
-            })
+            tags.append(
+                {"tag": "african", "source": "restcountries", "evidence_type": "region"}
+            )
 
         if "Caribbean" in subregion or "tropical" in subregion.lower():
-            tags.append({
-                "tag": "tropical",
-                "source": "restcountries",
-                "evidence_type": "subregion"
-            })
+            tags.append(
+                {
+                    "tag": "tropical",
+                    "source": "restcountries",
+                    "evidence_type": "subregion",
+                }
+            )
 
         # Middle East
         if "Western Asia" in subregion or "Middle East" in subregion:
-            tags.append({
-                "tag": "middle-east",
-                "source": "restcountries",
-                "evidence_type": "subregion"
-            })
+            tags.append(
+                {
+                    "tag": "middle-east",
+                    "source": "restcountries",
+                    "evidence_type": "subregion",
+                }
+            )
 
         return tags

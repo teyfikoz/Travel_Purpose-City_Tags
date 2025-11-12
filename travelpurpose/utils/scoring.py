@@ -9,7 +9,9 @@ import numpy as np
 logger = logging.getLogger(__name__)
 
 
-def calculate_tag_weights(tags: list[dict], source_weights: dict[str, float] = None) -> dict[str, float]:
+def calculate_tag_weights(
+    tags: list[dict], source_weights: dict[str, float] = None
+) -> dict[str, float]:
     """
     Calculate weighted scores for each unique tag.
 
@@ -179,7 +181,9 @@ def aggregate_scores_by_category(
             # Add to main category
             main_cat = best_match.get("main")
             if main_cat:
-                main_scores[main_cat] = main_scores.get(main_cat, 0.0) + weight * best_score
+                main_scores[main_cat] = (
+                    main_scores.get(main_cat, 0.0) + weight * best_score
+                )
 
             # Add to subcategories
             sub_cats = best_match.get("sub", [])

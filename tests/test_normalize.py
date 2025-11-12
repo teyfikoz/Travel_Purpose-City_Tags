@@ -2,7 +2,6 @@
 Tests for normalization utilities.
 """
 
-
 from travelpurpose.utils.normalize import (
     deduplicate_cities,
     extract_keywords,

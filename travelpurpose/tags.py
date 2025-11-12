@@ -54,7 +54,15 @@ def get_tags_for_city(
 
     # Default sources
     if sources is None:
-        sources = ["wikidata", "booking", "agoda", "trivago", "kayak", "tripdotcom", "skyscanner"]
+        sources = [
+            "wikidata",
+            "booking",
+            "agoda",
+            "trivago",
+            "kayak",
+            "tripdotcom",
+            "skyscanner",
+        ]
 
     all_tags = []
     config = HarvestConfig(rate_limit=1.5)  # Conservative rate limit
@@ -149,7 +157,9 @@ def load_tags_cache():
                     if isinstance(tag, dict):
                         tag_records.append({**tag, "city": city})
                     else:
-                        tag_records.append({"city": city, "tag": str(tag), "source": "cached"})
+                        tag_records.append(
+                            {"city": city, "tag": str(tag), "source": "cached"}
+                        )
 
         if tag_records:
             _TAGS_CACHE = pd.DataFrame(tag_records)

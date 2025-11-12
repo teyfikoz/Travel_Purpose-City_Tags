@@ -85,7 +85,7 @@ class GeoNamesHarvester(BaseHarvester):
             "maxRows": 5,
             "featureClass": "P",  # Populated places
             "username": self.username,
-            "type": "json"
+            "type": "json",
         }
 
         if country:
@@ -108,12 +108,11 @@ class GeoNamesHarvester(BaseHarvester):
                 "geonameId": geoname_id,
                 "radius": 20,  # 20km radius
                 "maxRows": 50,
-                "username": self.username
+                "username": self.username,
             }
 
             response = self._make_request(
-                f"{self.BASE_URL}/findNearbyJSON",
-                params=params
+                f"{self.BASE_URL}/findNearbyJSON", params=params
             )
 
             if response and "geonames" in response:
@@ -147,123 +146,132 @@ class GeoNamesHarvester(BaseHarvester):
         tags = []
 
         # Culture & Heritage
-        if fcode in ["MUS", "MNMT", "ANS", "HSTS"]:  # Museum, Monument, Ancient site, Historical site
-            tags.append({
-                "tag": "historic",
-                "source": "geonames",
-                "evidence_type": "feature_code",
-                "detail": fcode
-            })
-            tags.append({
-                "tag": "cultural",
-                "source": "geonames",
-                "evidence_type": "feature_code"
-            })
+        if fcode in [
+            "MUS",
+            "MNMT",
+            "ANS",
+            "HSTS",
+        ]:  # Museum, Monument, Ancient site, Historical site
+            tags.append(
+                {
+                    "tag": "historic",
+                    "source": "geonames",
+                    "evidence_type": "feature_code",
+                    "detail": fcode,
+                }
+            )
+            tags.append(
+                {
+                    "tag": "cultural",
+                    "source": "geonames",
+                    "evidence_type": "feature_code",
+                }
+            )
 
         # Religious
         if fcode in ["MSQE", "CH", "TMPL", "SHRN"]:  # Mosque, Church, Temple, Shrine
-            tags.append({
-                "tag": "religious",
-                "source": "geonames",
-                "evidence_type": "feature_code"
-            })
+            tags.append(
+                {
+                    "tag": "religious",
+                    "source": "geonames",
+                    "evidence_type": "feature_code",
+                }
+            )
 
         # Beach & Coast
         if fcode in ["BCH", "BCHS", "COVE"]:  # Beach
-            tags.append({
-                "tag": "beach",
-                "source": "geonames",
-                "evidence_type": "feature_code"
-            })
+            tags.append(
+                {"tag": "beach", "source": "geonames", "evidence_type": "feature_code"}
+            )
 
         # Island
         if fcode in ["ISL", "ISLS", "ATOL"]:  # Island, Islands, Atoll
-            tags.append({
-                "tag": "island",
-                "source": "geonames",
-                "evidence_type": "feature_code"
-            })
+            tags.append(
+                {"tag": "island", "source": "geonames", "evidence_type": "feature_code"}
+            )
 
         # Mountain / Trekking
         if fcode in ["MT", "MTS", "PK"]:  # Mountain, Mountains, Peak
-            tags.append({
-                "tag": "mountain",
-                "source": "geonames",
-                "evidence_type": "feature_code"
-            })
-            tags.append({
-                "tag": "trekking",
-                "source": "geonames",
-                "evidence_type": "feature_code"
-            })
+            tags.append(
+                {
+                    "tag": "mountain",
+                    "source": "geonames",
+                    "evidence_type": "feature_code",
+                }
+            )
+            tags.append(
+                {
+                    "tag": "trekking",
+                    "source": "geonames",
+                    "evidence_type": "feature_code",
+                }
+            )
 
         # Ski Resort
         if fcode == "RESW":  # Winter resort
-            tags.append({
-                "tag": "ski",
-                "source": "geonames",
-                "evidence_type": "feature_code"
-            })
+            tags.append(
+                {"tag": "ski", "source": "geonames", "evidence_type": "feature_code"}
+            )
 
         # Airport
         if fcode in ["AIRP", "AIRF"]:  # Airport
-            tags.append({
-                "tag": "airport",
-                "source": "geonames",
-                "evidence_type": "feature_code"
-            })
+            tags.append(
+                {
+                    "tag": "airport",
+                    "source": "geonames",
+                    "evidence_type": "feature_code",
+                }
+            )
 
         # Port
         if fcode in ["PRT", "PRTF"]:  # Port, Free port
-            tags.append({
-                "tag": "port",
-                "source": "geonames",
-                "evidence_type": "feature_code"
-            })
+            tags.append(
+                {"tag": "port", "source": "geonames", "evidence_type": "feature_code"}
+            )
 
         # Casino
         if fcode == "CSNO":
-            tags.append({
-                "tag": "casino",
-                "source": "geonames",
-                "evidence_type": "feature_code"
-            })
+            tags.append(
+                {"tag": "casino", "source": "geonames", "evidence_type": "feature_code"}
+            )
 
         # Hospital / Medical
         if fcode in ["HSP", "HSPC", "HSPD"]:  # Hospital
-            tags.append({
-                "tag": "medical",
-                "source": "geonames",
-                "evidence_type": "feature_code"
-            })
+            tags.append(
+                {
+                    "tag": "medical",
+                    "source": "geonames",
+                    "evidence_type": "feature_code",
+                }
+            )
 
         # Theme Park / Zoo
         if fcode in ["AMTH", "ZOO"]:  # Amphitheater, Zoo
-            tags.append({
-                "tag": "family",
-                "source": "geonames",
-                "evidence_type": "feature_code"
-            })
+            tags.append(
+                {"tag": "family", "source": "geonames", "evidence_type": "feature_code"}
+            )
 
         # Resort
-        if fcode in ["RESH", "REST", "RESV"]:  # Health resort, Tourist resort, Vacation resort
-            tags.append({
-                "tag": "resort",
-                "source": "geonames",
-                "evidence_type": "feature_code"
-            })
+        if fcode in [
+            "RESH",
+            "REST",
+            "RESV",
+        ]:  # Health resort, Tourist resort, Vacation resort
+            tags.append(
+                {"tag": "resort", "source": "geonames", "evidence_type": "feature_code"}
+            )
 
         # Spa
         if fcode in ["SPNT", "SPA"]:  # Hot spring, Spa
-            tags.append({
-                "tag": "spa",
-                "source": "geonames",
-                "evidence_type": "feature_code"
-            })
-            tags.append({
-                "tag": "wellness",
-                "source": "geonames",
-                "evidence_type": "feature_code"
-            })
+            tags.append(
+                {"tag": "spa", "source": "geonames", "evidence_type": "feature_code"}
+            )
+            tags.append(
+                {
+                    "tag": "wellness",
+                    "source": "geonames",
+                    "evidence_type": "feature_code",
+                }
+            )
 
         return tags

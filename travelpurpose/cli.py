@@ -29,9 +29,13 @@ logging.basicConfig(
 @app.command()
 def predict(
     city: str = typer.Argument(..., help="City name to classify"),
-    no_cache: bool = typer.Option(False, "--no-cache", help="Disable cache and fetch fresh data"),
+    no_cache: bool = typer.Option(
+        False, "--no-cache", help="Disable cache and fetch fresh data"
+    ),
     json_output: bool = typer.Option(False, "--json", help="Output as JSON"),
-    verbose: bool = typer.Option(False, "--verbose", "-v", help="Enable verbose logging"),
+    verbose: bool = typer.Option(
+        False, "--verbose", "-v", help="Enable verbose logging"
+    ),
 ):
     """
     Predict travel purposes for a city.
@@ -69,10 +73,14 @@ def predict(
 @app.command()
 def show_tags(
     city: str = typer.Argument(..., help="City name"),
-    limit: int = typer.Option(20, "--limit", "-n", help="Maximum number of tags to show"),
+    limit: int = typer.Option(
+        20, "--limit", "-n", help="Maximum number of tags to show"
+    ),
     source: str | None = typer.Option(None, "--source", "-s", help="Filter by source"),
     json_output: bool = typer.Option(False, "--json", help="Output as JSON"),
-    verbose: bool = typer.Option(False, "--verbose", "-v", help="Enable verbose logging"),
+    verbose: bool = typer.Option(
+        False, "--verbose", "-v", help="Enable verbose logging"
+    ),
 ):
     """
     Show raw tags for a city.
@@ -88,7 +96,9 @@ def show_tags(
         city_tags = tags(city)
 
     if source:
-        city_tags = [t for t in city_tags if t.get("source", "").lower() == source.lower()]
+        city_tags = [
+            t for t in city_tags if t.get("source", "").lower() == source.lower()
+        ]
 
     city_tags = city_tags[:limit]
 
@@ -99,7 +109,9 @@ def show_tags(
             console.print(f"[yellow]No tags found for {city}")
             return
 
-        table = Table(title=f"Tags for {city} (showing {len(city_tags)})", show_header=True)
+        table = Table(
+            title=f"Tags for {city} (showing {len(city_tags)})", show_header=True
+        )
         table.add_column("Tag", style="cyan")
         table.add_column("Source", style="green")
         table.add_column("Evidence", style="magenta")
@@ -150,9 +162,15 @@ def find(
 
 @app.command()
 def rebuild(
-    output_dir: str | None = typer.Option(None, "--output", "-o", help="Output directory"),
-    min_population: int = typer.Option(100000, "--min-pop", help="Minimum city population"),
-    verbose: bool = typer.Option(False, "--verbose", "-v", help="Enable verbose logging"),
+    output_dir: str | None = typer.Option(
+        None, "--output", "-o", help="Output directory"
+    ),
+    min_population: int = typer.Option(
+        100000, "--min-pop", help="Minimum city population"
+    ),
+    verbose: bool = typer.Option(
+        False, "--verbose", "-v", help="Enable verbose logging"
+    ),
 ):
     """
     Rebuild the cities dataset by running the data pipeline.

@@ -49,7 +49,10 @@ def to_ascii(text: str) -> str:
     """
     # Normalize to NFKD form and encode to ASCII, ignoring errors
     return (
-        unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode("ascii").strip()
+        unicodedata.normalize("NFKD", text)
+        .encode("ascii", "ignore")
+        .decode("ascii")
+        .strip()
     )
 
 
@@ -151,7 +154,9 @@ def extract_keywords(text: str, min_length: int = 3) -> set[str]:
     return keywords
 
 
-def fuzzy_match_tag(tag: str, keyword_list: list[str], threshold: float = 0.7) -> str | None:
+def fuzzy_match_tag(
+    tag: str, keyword_list: list[str], threshold: float = 0.7
+) -> str | None:
     """
     Fuzzy match a tag against a list of keywords.
 

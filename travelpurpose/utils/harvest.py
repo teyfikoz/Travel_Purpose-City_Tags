@@ -163,7 +163,7 @@ class BaseHarvester:
                     time.sleep(wait_time)
                     continue
                 elif e.response.status_code >= 500:
-                    wait_time = self.config.retry_backoff ** attempt
+                    wait_time = self.config.retry_backoff**attempt
                     logger.warning(
                         f"Server error {e.response.status_code} on {url}, retrying in {wait_time}s"
                     )

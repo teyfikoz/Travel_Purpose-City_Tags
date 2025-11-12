@@ -2,7 +2,6 @@
 Tests for scoring utilities.
 """
 
-
 from travelpurpose.utils.scoring import (
     calculate_confidence,
     calculate_tag_weights,

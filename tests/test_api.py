@@ -2,7 +2,6 @@
 Tests for the main API functions.
 """
 
-
 from travelpurpose.classifier import get_ontology, load, predict_purpose, search
 
 

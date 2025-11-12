@@ -16,7 +16,9 @@ class WikidataClient:
     """Client for querying Wikidata for city information."""
 
     SPARQL_ENDPOINT = "https://query.wikidata.org/sparql"
-    USER_AGENT = "TravelPurpose/0.1.0 (https://github.com/teyfikoz/Travel_Purpose-City_Tags)"
+    USER_AGENT = (
+        "TravelPurpose/0.1.0 (https://github.com/teyfikoz/Travel_Purpose-City_Tags)"
+    )
 
     def __init__(self, rate_limit: float = 1.0):
         """
@@ -113,7 +115,9 @@ class WikidataClient:
         logger.info(f"Fetched {len(cities)} cities from Wikidata")
         return cities
 
-    def get_city_by_name(self, city_name: str, country: str | None = None) -> dict | None:
+    def get_city_by_name(
+        self, city_name: str, country: str | None = None
+    ) -> dict | None:
         """
         Search for a specific city by name.
 
@@ -126,7 +130,9 @@ class WikidataClient:
         """
         country_filter = ""
         if country:
-            country_filter = f'?city wdt:P17 ?country . ?country rdfs:label "{country}"@en .'
+            country_filter = (
+                f'?city wdt:P17 ?country . ?country rdfs:label "{country}"@en .'
+            )
 
         query = f"""
         SELECT DISTINCT ?city ?cityLabel ?countryLabel ?population ?lat ?lon ?wikidataId
@@ -230,7 +236,9 @@ class WikidataClient:
         """
 
         results = self.query(query)
-        categories = [r["categoryLabel"]["value"] for r in results if "categoryLabel" in r]
+        categories = [
+            r["categoryLabel"]["value"] for r in results if "categoryLabel" in r
+        ]
         return categories
 
 

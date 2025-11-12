@@ -2,7 +2,6 @@
 Tests for scoring utilities.
 """
 
-import pytest
 
 from travelpurpose.utils.scoring import (
     calculate_confidence,

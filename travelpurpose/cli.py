@@ -4,14 +4,13 @@ Command-line interface for TravelPurpose.
 
 import json
 import logging
-from typing import List, Optional
 
 import typer
 from rich.console import Console
 from rich.table import Table
 
 from travelpurpose import __version__
-from travelpurpose.classifier import load, predict_purpose, search, tags
+from travelpurpose.classifier import predict_purpose, search, tags
 
 app = typer.Typer(
     name="tpurpose",
@@ -71,7 +70,7 @@ def predict(
 def show_tags(
     city: str = typer.Argument(..., help="City name"),
     limit: int = typer.Option(20, "--limit", "-n", help="Maximum number of tags to show"),
-    source: Optional[str] = typer.Option(None, "--source", "-s", help="Filter by source"),
+    source: str | None = typer.Option(None, "--source", "-s", help="Filter by source"),
     json_output: bool = typer.Option(False, "--json", help="Output as JSON"),
     verbose: bool = typer.Option(False, "--verbose", "-v", help="Enable verbose logging"),
 ):
@@ -151,7 +150,7 @@ def find(
 
 @app.command()
 def rebuild(
-    output_dir: Optional[str] = typer.Option(None, "--output", "-o", help="Output directory"),
+    output_dir: str | None = typer.Option(None, "--output", "-o", help="Output directory"),
     min_population: int = typer.Option(100000, "--min-pop", help="Minimum city population"),
     verbose: bool = typer.Option(False, "--verbose", "-v", help="Enable verbose logging"),
 ):

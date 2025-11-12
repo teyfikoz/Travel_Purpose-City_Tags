@@ -5,7 +5,6 @@ Uses public autosuggest/locations endpoints within ToS.
 """
 
 import logging
-from typing import Dict, List, Optional
 
 from travelpurpose.utils.harvest import BaseHarvester, safe_harvest
 
@@ -18,7 +17,7 @@ class SkyscannerHarvester(BaseHarvester):
     AUTOSUGGEST_URL = "https://www.skyscanner.net/g/autosuggest-flights/api/v1/search"
 
     @safe_harvest
-    def search_city(self, query: str) -> List[Dict]:
+    def search_city(self, query: str) -> list[dict]:
         """
         Search for cities using autosuggest endpoint.
 
@@ -61,7 +60,7 @@ class SkyscannerHarvester(BaseHarvester):
             return []
 
     @safe_harvest
-    def get_city_tags(self, city_name: str) -> List[Dict]:
+    def get_city_tags(self, city_name: str) -> list[dict]:
         """
         Get tags for a city (placeholder - Skyscanner has limited public tag data).
 

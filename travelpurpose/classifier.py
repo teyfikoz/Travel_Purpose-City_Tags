@@ -5,7 +5,6 @@ Provides the public API for city travel purpose classification.
 """
 
 import logging
-from typing import Dict, List, Optional
 
 import pandas as pd
 
@@ -25,9 +24,9 @@ logger = logging.getLogger(__name__)
 
 # Global state
 _DATA_LOADED = False
-_CITIES_DF: Optional[pd.DataFrame] = None
-_ONTOLOGY: Optional[Dict] = None
-_NBD_MAPPING: Optional[Dict] = None
+_CITIES_DF: pd.DataFrame | None = None
+_ONTOLOGY: dict | None = None
+_NBD_MAPPING: dict | None = None
 
 
 def load():
@@ -73,7 +72,7 @@ def load():
     logger.info("Data loading complete")
 
 
-def predict_purpose(city_name: str, use_cache: bool = True) -> Dict:
+def predict_purpose(city_name: str, use_cache: bool = True) -> dict:
     """
     Predict travel purposes for a city.
 
@@ -169,7 +168,7 @@ def predict_purpose(city_name: str, use_cache: bool = True) -> Dict:
     return result
 
 
-def tags(city_name: str, use_cache: bool = True) -> List[Dict]:
+def tags(city_name: str, use_cache: bool = True) -> list[dict]:
     """
     Get raw harvested tags for a city.
 
@@ -193,7 +192,7 @@ def tags(city_name: str, use_cache: bool = True) -> List[Dict]:
     return get_tags_for_city(city_name, use_cache=use_cache)
 
 
-def search(query: str) -> List[Dict]:
+def search(query: str) -> list[dict]:
     """
     Search for cities matching a query.
 
@@ -229,7 +228,7 @@ def search(query: str) -> List[Dict]:
     return results
 
 
-def get_ontology() -> Dict:
+def get_ontology() -> dict:
     """
     Get the current ontology configuration.
 
@@ -242,7 +241,7 @@ def get_ontology() -> Dict:
     return _ONTOLOGY
 
 
-def get_available_cities() -> List[str]:
+def get_available_cities() -> list[str]:
     """
     Get list of available cities in the dataset.
 

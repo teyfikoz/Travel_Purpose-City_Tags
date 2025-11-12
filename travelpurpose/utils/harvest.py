@@ -6,7 +6,6 @@ Provides rate limiting, caching, robots.txt compliance, and error handling.
 
 import logging
 import time
-from typing import Dict, List, Optional
 from urllib.parse import urlparse
 from urllib.robotparser import RobotFileParser
 
@@ -54,7 +53,7 @@ class HarvestConfig:
 class BaseHarvester:
     """Base class for web harvesters with rate limiting and caching."""
 
-    def __init__(self, config: Optional[HarvestConfig] = None):
+    def __init__(self, config: HarvestConfig | None = None):
         """
         Initialize harvester.
 
@@ -62,8 +61,8 @@ class BaseHarvester:
             config: Harvest configuration
         """
         self.config = config or HarvestConfig()
-        self.last_request_time: Dict[str, float] = {}
-        self.robots_cache: Dict[str, RobotFileParser] = {}
+        self.last_request_time: dict[str, float] = {}
+        self.robots_cache: dict[str, RobotFileParser] = {}
 
         # Setup session with caching
         from travelpurpose.utils.io import get_cache_dir
@@ -131,7 +130,7 @@ class BaseHarvester:
 
         return allowed
 
-    def get(self, url: str, **kwargs) -> Optional[requests.Response]:
+    def get(self, url: str, **kwargs) -> requests.Response | None:
         """
         Make GET request with rate limiting and retries.
 
@@ -185,7 +184,7 @@ class BaseHarvester:
         logger.error(f"Failed to fetch {url} after {self.config.max_retries} attempts")
         return None
 
-    def _make_request(self, url: str, params: Optional[Dict] = None) -> Optional[Dict]:
+    def _make_request(self, url: str, params: dict | None = None) -> dict | None:
         """
         Make GET request and return JSON response.
 
@@ -207,7 +206,7 @@ class BaseHarvester:
             logger.error(f"Failed to parse JSON from {url}: {e}")
             return None
 
-    def parse_html(self, html_content: str) -> Optional[BeautifulSoup]:
+    def parse_html(self, html_content: str) -> BeautifulSoup | None:
         """
         Parse HTML content.
 
@@ -225,7 +224,7 @@ class BaseHarvester:
 
     def extract_tags_from_page(
         self, url: str, city: str, source: str
-    ) -> List[Dict[str, str]]:
+    ) -> list[dict[str, str]]:
         """
         Extract tags from a web page.
 

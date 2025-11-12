@@ -3,14 +3,13 @@ Scoring and confidence calculation utilities for classification.
 """
 
 import logging
-from typing import Dict, List, Tuple
 
 import numpy as np
 
 logger = logging.getLogger(__name__)
 
 
-def calculate_tag_weights(tags: List[Dict], source_weights: Dict[str, float] = None) -> Dict[str, float]:
+def calculate_tag_weights(tags: list[dict], source_weights: dict[str, float] = None) -> dict[str, float]:
     """
     Calculate weighted scores for each unique tag.
 
@@ -60,7 +59,7 @@ def calculate_tag_weights(tags: List[Dict], source_weights: Dict[str, float] = N
     return tag_weights
 
 
-def normalize_scores(scores: Dict[str, float]) -> Dict[str, float]:
+def normalize_scores(scores: dict[str, float]) -> dict[str, float]:
     """
     Normalize scores to 0-1 range using softmax-like normalization.
 
@@ -85,8 +84,8 @@ def normalize_scores(scores: Dict[str, float]) -> Dict[str, float]:
 
 
 def calculate_confidence(
-    main_scores: Dict[str, float],
-    sub_scores: Dict[str, float],
+    main_scores: dict[str, float],
+    sub_scores: dict[str, float],
     min_confidence: float = 0.1,
 ) -> float:
     """
@@ -118,10 +117,10 @@ def calculate_confidence(
 
 
 def select_top_labels(
-    scores: Dict[str, float],
+    scores: dict[str, float],
     threshold: float = 0.15,
     max_labels: int = 5,
-) -> List[Tuple[str, float]]:
+) -> list[tuple[str, float]]:
     """
     Select top labels based on threshold and max count.
 
@@ -144,9 +143,9 @@ def select_top_labels(
 
 
 def aggregate_scores_by_category(
-    tag_weights: Dict[str, float],
-    tag_mappings: Dict[str, Dict],
-) -> Tuple[Dict[str, float], Dict[str, float]]:
+    tag_weights: dict[str, float],
+    tag_mappings: dict[str, dict],
+) -> tuple[dict[str, float], dict[str, float]]:
     """
     Aggregate tag weights into main and subcategory scores.
 
@@ -191,12 +190,12 @@ def aggregate_scores_by_category(
 
 
 def merge_nbd_purposes(
-    main_scores: Dict[str, float],
-    sub_scores: Dict[str, float],
-    nbd_purposes: List[str],
-    nbd_mapping: Dict[str, Dict],
+    main_scores: dict[str, float],
+    sub_scores: dict[str, float],
+    nbd_purposes: list[str],
+    nbd_mapping: dict[str, dict],
     nbd_weight: float = 2.0,
-) -> Tuple[Dict[str, float], Dict[str, float]]:
+) -> tuple[dict[str, float], dict[str, float]]:
     """
     Merge NBD purposes into existing scores with high weight.
 

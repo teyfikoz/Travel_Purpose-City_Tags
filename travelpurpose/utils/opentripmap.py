@@ -10,9 +10,6 @@ OpenTripMap provides:
 """
 
 import logging
-from typing import Dict, List, Optional
-
-import requests
 
 from travelpurpose.utils.harvest import BaseHarvester, HarvestConfig
 
@@ -39,7 +36,7 @@ class OpenTripMapHarvester(BaseHarvester):
         super().__init__(config)
         self.api_key = api_key or "5ae2e3f221c38a28845f05b63c6dd2a1fe9b3f3e5d7e3b9e8b6d3f9e"  # Demo key
 
-    def get_city_tags(self, city_name: str, country: str = "") -> List[Dict]:
+    def get_city_tags(self, city_name: str, country: str = "") -> list[dict]:
         """
         Get tags from OpenTripMap for a city.
 
@@ -86,7 +83,7 @@ class OpenTripMapHarvester(BaseHarvester):
 
         return tags
 
-    def _get_city_coordinates(self, city_name: str) -> Optional[tuple]:
+    def _get_city_coordinates(self, city_name: str) -> tuple | None:
         """Get city coordinates using geoname search."""
         try:
             params = {
@@ -104,7 +101,7 @@ class OpenTripMapHarvester(BaseHarvester):
 
         return None
 
-    def _get_nearby_pois(self, lat: float, lon: float, radius: int = 5000) -> List[Dict]:
+    def _get_nearby_pois(self, lat: float, lon: float, radius: int = 5000) -> list[dict]:
         """Get POIs near coordinates."""
         pois = []
 
@@ -127,7 +124,7 @@ class OpenTripMapHarvester(BaseHarvester):
 
         return pois
 
-    def _extract_tags_from_poi(self, poi: Dict) -> List[Dict]:
+    def _extract_tags_from_poi(self, poi: dict) -> list[dict]:
         """Extract travel purpose tags from POI data."""
         tags = []
 

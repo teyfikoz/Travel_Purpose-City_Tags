@@ -5,7 +5,6 @@ Uses public autocomplete and landing pages.
 """
 
 import logging
-from typing import Dict, List
 
 from travelpurpose.utils.harvest import BaseHarvester, safe_harvest
 
@@ -18,7 +17,7 @@ class KayakHarvester(BaseHarvester):
     BASE_URL = "https://www.kayak.com"
 
     @safe_harvest
-    def get_city_tags(self, city_name: str, country: str = "") -> List[Dict]:
+    def get_city_tags(self, city_name: str, country: str = "") -> list[dict]:
         """
         Get tags for a city from Kayak public pages.
 

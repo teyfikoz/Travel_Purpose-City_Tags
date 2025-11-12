@@ -2,7 +2,6 @@
 Tests for normalization utilities.
 """
 
-import pytest
 
 from travelpurpose.utils.normalize import (
     deduplicate_cities,

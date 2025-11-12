@@ -6,10 +6,7 @@ Fetches city information including names, coordinates, population, country, etc.
 
 import logging
 import time
-from typing import Dict, List, Optional
-from urllib.parse import quote
 
-import requests
 from SPARQLWrapper import JSON, SPARQLWrapper
 
 logger = logging.getLogger(__name__)
@@ -41,7 +38,7 @@ class WikidataClient:
             time.sleep(self.rate_limit - elapsed)
         self.last_request_time = time.time()
 
-    def query(self, sparql_query: str) -> List[Dict]:
+    def query(self, sparql_query: str) -> list[dict]:
         """
         Execute a SPARQL query against Wikidata.
 
@@ -63,7 +60,7 @@ class WikidataClient:
 
     def get_cities_by_population(
         self, min_population: int = 100000, limit: int = 5000
-    ) -> List[Dict]:
+    ) -> list[dict]:
         """
         Fetch cities with population above threshold.
 
@@ -116,7 +113,7 @@ class WikidataClient:
         logger.info(f"Fetched {len(cities)} cities from Wikidata")
         return cities
 
-    def get_city_by_name(self, city_name: str, country: Optional[str] = None) -> Optional[Dict]:
+    def get_city_by_name(self, city_name: str, country: str | None = None) -> dict | None:
         """
         Search for a specific city by name.
 
@@ -171,7 +168,7 @@ class WikidataClient:
             logger.error(f"Failed to parse city data: {e}")
             return None
 
-    def get_unesco_sites(self) -> List[Dict]:
+    def get_unesco_sites(self) -> list[dict]:
         """
         Fetch UNESCO World Heritage Sites and their cities.
 
@@ -212,7 +209,7 @@ class WikidataClient:
         logger.info(f"Fetched {len(sites)} UNESCO sites from Wikidata")
         return sites
 
-    def get_city_categories(self, wikidata_id: str) -> List[str]:
+    def get_city_categories(self, wikidata_id: str) -> list[str]:
         """
         Get Wikipedia categories for a city.
 
@@ -238,8 +235,8 @@ class WikidataClient:
 
 
 def fetch_canonical_cities(
-    min_population: int = 100000, cache_file: Optional[str] = None
-) -> List[Dict]:
+    min_population: int = 100000, cache_file: str | None = None
+) -> list[dict]:
     """
     Fetch canonical city list from Wikidata with caching.
 
@@ -256,7 +253,7 @@ def fetch_canonical_cities(
     # Try to load from cache first
     if cache_file and os.path.exists(cache_file):
         try:
-            with open(cache_file, "r", encoding="utf-8") as f:
+            with open(cache_file, encoding="utf-8") as f:
                 cities = json.load(f)
             logger.info(f"Loaded {len(cities)} cities from cache: {cache_file}")
             return cities

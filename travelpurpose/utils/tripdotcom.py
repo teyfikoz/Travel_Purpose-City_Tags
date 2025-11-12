@@ -5,7 +5,6 @@ Uses public location search and landing pages.
 """
 
 import logging
-from typing import Dict, List
 
 from travelpurpose.utils.harvest import BaseHarvester, safe_harvest
 
@@ -18,7 +17,7 @@ class TripDotComHarvester(BaseHarvester):
     BASE_URL = "https://us.trip.com"
 
     @safe_harvest
-    def get_city_tags(self, city_name: str, country: str = "") -> List[Dict]:
+    def get_city_tags(self, city_name: str, country: str = "") -> list[dict]:
         """
         Get tags for a city from Trip.com public pages.
 

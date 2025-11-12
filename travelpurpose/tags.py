@@ -5,7 +5,6 @@ Provides functions for harvesting and retrieving tags for cities.
 """
 
 import logging
-from typing import Dict, List, Optional
 
 import pandas as pd
 
@@ -23,14 +22,14 @@ from travelpurpose.utils.wikidata import WikidataClient
 logger = logging.getLogger(__name__)
 
 # Global cache
-_TAGS_CACHE: Optional[pd.DataFrame] = None
+_TAGS_CACHE: pd.DataFrame | None = None
 
 
 def get_tags_for_city(
     city_name: str,
-    sources: Optional[List[str]] = None,
+    sources: list[str] | None = None,
     use_cache: bool = True,
-) -> List[Dict]:
+) -> list[dict]:
     """
     Get all tags for a city from various sources.
 

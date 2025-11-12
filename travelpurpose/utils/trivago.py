@@ -6,7 +6,6 @@ Respects robots.txt.
 """
 
 import logging
-from typing import Dict, List
 
 from travelpurpose.utils.harvest import BaseHarvester, safe_harvest
 
@@ -19,7 +18,7 @@ class TrivagoHarvester(BaseHarvester):
     BASE_URL = "https://www.trivago.com"
 
     @safe_harvest
-    def get_city_tags(self, city_name: str, country: str = "") -> List[Dict]:
+    def get_city_tags(self, city_name: str, country: str = "") -> list[dict]:
         """
         Get tags for a city from Trivago public pages.
 

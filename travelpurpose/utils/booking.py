@@ -6,7 +6,6 @@ Absolutely NO login or private APIs.
 """
 
 import logging
-from typing import Dict, List
 
 from travelpurpose.utils.harvest import BaseHarvester, safe_harvest
 
@@ -19,7 +18,7 @@ class BookingHarvester(BaseHarvester):
     BASE_URL = "https://www.booking.com"
 
     @safe_harvest
-    def get_city_tags(self, city_name: str, country: str = "") -> List[Dict]:
+    def get_city_tags(self, city_name: str, country: str = "") -> list[dict]:
         """
         Get tags for a city from Booking.com public pages.
 

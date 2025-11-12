@@ -5,7 +5,6 @@ Text normalization and city name processing utilities.
 import logging
 import re
 import unicodedata
-from typing import Dict, List, Optional, Set
 
 logger = logging.getLogger(__name__)
 
@@ -85,7 +84,7 @@ def normalize_tag(tag: str) -> str:
     return tag
 
 
-def extract_keywords(text: str, min_length: int = 3) -> Set[str]:
+def extract_keywords(text: str, min_length: int = 3) -> set[str]:
     """
     Extract keywords from text.
 
@@ -152,7 +151,7 @@ def extract_keywords(text: str, min_length: int = 3) -> Set[str]:
     return keywords
 
 
-def fuzzy_match_tag(tag: str, keyword_list: List[str], threshold: float = 0.7) -> Optional[str]:
+def fuzzy_match_tag(tag: str, keyword_list: list[str], threshold: float = 0.7) -> str | None:
     """
     Fuzzy match a tag against a list of keywords.
 
@@ -194,7 +193,7 @@ def fuzzy_match_tag(tag: str, keyword_list: List[str], threshold: float = 0.7) -
     return None
 
 
-def deduplicate_cities(cities: List[Dict]) -> List[Dict]:
+def deduplicate_cities(cities: list[dict]) -> list[dict]:
     """
     Deduplicate cities by wikidata_id or normalized name+country.
 
@@ -242,7 +241,7 @@ def translate_tag(tag: str, source_lang: str = "auto", target_lang: str = "en") 
     return normalize_tag(tag)
 
 
-def parse_json_ld(html_content: str) -> List[Dict]:
+def parse_json_ld(html_content: str) -> list[dict]:
     """
     Extract JSON-LD structured data from HTML.
 
@@ -274,7 +273,7 @@ def parse_json_ld(html_content: str) -> List[Dict]:
         return []
 
 
-def extract_meta_tags(html_content: str) -> Dict[str, str]:
+def extract_meta_tags(html_content: str) -> dict[str, str]:
     """
     Extract meta tags from HTML.
 
@@ -302,7 +301,7 @@ def extract_meta_tags(html_content: str) -> Dict[str, str]:
         return {}
 
 
-def extract_headings(html_content: str) -> List[str]:
+def extract_headings(html_content: str) -> list[str]:
     """
     Extract H1 and H2 headings from HTML.
 

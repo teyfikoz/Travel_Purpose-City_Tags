@@ -11,9 +11,6 @@ Provides:
 """
 
 import logging
-from typing import Dict, List, Optional
-
-import requests
 
 from travelpurpose.utils.harvest import BaseHarvester, HarvestConfig
 
@@ -34,7 +31,7 @@ class RestCountriesClient(BaseHarvester):
         super().__init__(config)
         self._cache = {}  # Cache country data
 
-    def get_country_info(self, country_name: str) -> Optional[Dict]:
+    def get_country_info(self, country_name: str) -> dict | None:
         """
         Get country information.
 
@@ -79,7 +76,7 @@ class RestCountriesClient(BaseHarvester):
 
         return None
 
-    def get_country_tags(self, country_info: Dict) -> List[Dict]:
+    def get_country_tags(self, country_info: dict) -> list[dict]:
         """
         Extract travel-relevant tags from country info.
 

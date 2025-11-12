@@ -6,7 +6,7 @@ import json
 import logging
 import os
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any
 
 import pandas as pd
 import yaml
@@ -19,7 +19,7 @@ def get_package_dir() -> Path:
     return Path(__file__).parent.parent
 
 
-def load_ontology() -> Dict[str, Any]:
+def load_ontology() -> dict[str, Any]:
     """
     Load the ontology configuration.
 
@@ -29,7 +29,7 @@ def load_ontology() -> Dict[str, Any]:
     ontology_path = get_package_dir() / "ontology" / "ontology.yaml"
 
     try:
-        with open(ontology_path, "r", encoding="utf-8") as f:
+        with open(ontology_path, encoding="utf-8") as f:
             ontology = yaml.safe_load(f)
         logger.info(f"Loaded ontology from {ontology_path}")
         return ontology
@@ -42,7 +42,7 @@ def load_ontology() -> Dict[str, Any]:
         }
 
 
-def load_nbd_mapping() -> Dict[str, Any]:
+def load_nbd_mapping() -> dict[str, Any]:
     """
     Load NBD purpose mapping configuration.
 
@@ -52,7 +52,7 @@ def load_nbd_mapping() -> Dict[str, Any]:
     mapping_path = get_package_dir() / "ontology" / "mapping_nbd.yaml"
 
     try:
-        with open(mapping_path, "r", encoding="utf-8") as f:
+        with open(mapping_path, encoding="utf-8") as f:
             mapping = yaml.safe_load(f)
         logger.info(f"Loaded NBD mapping from {mapping_path}")
         return mapping
@@ -61,7 +61,7 @@ def load_nbd_mapping() -> Dict[str, Any]:
         return {"nbd_to_main": {}}
 
 
-def load_cities_data() -> Optional[pd.DataFrame]:
+def load_cities_data() -> pd.DataFrame | None:
     """
     Load the cities dataset.
 
@@ -94,7 +94,7 @@ def load_cities_data() -> Optional[pd.DataFrame]:
     return None
 
 
-def save_cities_data(df: pd.DataFrame, output_dir: Optional[Path] = None):
+def save_cities_data(df: pd.DataFrame, output_dir: Path | None = None):
     """
     Save cities dataset to both parquet and JSON formats.
 
@@ -124,7 +124,7 @@ def save_cities_data(df: pd.DataFrame, output_dir: Optional[Path] = None):
         logger.error(f"Failed to save JSON: {e}")
 
 
-def load_nbd_excel(filepath: str) -> Optional[pd.DataFrame]:
+def load_nbd_excel(filepath: str) -> pd.DataFrame | None:
     """
     Load NBD.xlsx file.
 
@@ -147,7 +147,7 @@ def load_nbd_excel(filepath: str) -> Optional[pd.DataFrame]:
         return None
 
 
-def load_json(filepath: str) -> Optional[Any]:
+def load_json(filepath: str) -> Any | None:
     """
     Load JSON file.
 
@@ -158,7 +158,7 @@ def load_json(filepath: str) -> Optional[Any]:
         Parsed JSON data or None
     """
     try:
-        with open(filepath, "r", encoding="utf-8") as f:
+        with open(filepath, encoding="utf-8") as f:
             data = json.load(f)
         return data
     except Exception as e:
@@ -184,7 +184,7 @@ def save_json(data: Any, filepath: str, indent: int = 2):
         logger.error(f"Failed to save JSON to {filepath}: {e}")
 
 
-def load_yaml(filepath: str) -> Optional[Dict]:
+def load_yaml(filepath: str) -> dict | None:
     """
     Load YAML file.
 
@@ -195,7 +195,7 @@ def load_yaml(filepath: str) -> Optional[Dict]:
         Parsed YAML data or None
     """
     try:
-        with open(filepath, "r", encoding="utf-8") as f:
+        with open(filepath, encoding="utf-8") as f:
             data = yaml.safe_load(f)
         return data
     except Exception as e:
@@ -203,7 +203,7 @@ def load_yaml(filepath: str) -> Optional[Dict]:
         return None
 
 
-def save_yaml(data: Dict, filepath: str):
+def save_yaml(data: dict, filepath: str):
     """
     Save data to YAML file.
 

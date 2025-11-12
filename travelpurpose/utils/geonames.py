@@ -9,9 +9,6 @@ GeoNames provides:
 """
 
 import logging
-from typing import Dict, List, Optional
-
-import requests
 
 from travelpurpose.utils.harvest import BaseHarvester, HarvestConfig
 
@@ -39,7 +36,7 @@ class GeoNamesHarvester(BaseHarvester):
         super().__init__(config)
         self.username = username
 
-    def get_city_tags(self, city_name: str, country: str = "") -> List[Dict]:
+    def get_city_tags(self, city_name: str, country: str = "") -> list[dict]:
         """
         Get tags from GeoNames for a city.
 
@@ -69,9 +66,9 @@ class GeoNamesHarvester(BaseHarvester):
                 tags.extend(feature_tags)
 
             # Get nearby features (POIs, attractions)
-            geonameId = city_data.get("geonameId")
-            if geonameId:
-                nearby_tags = self._get_nearby_features(geonameId)
+            geoname_id = city_data.get("geonameId")
+            if geoname_id:
+                nearby_tags = self._get_nearby_features(geoname_id)
                 tags.extend(nearby_tags)
 
             logger.debug(f"GeoNames: Found {len(tags)} tags for {city_name}")
@@ -81,7 +78,7 @@ class GeoNamesHarvester(BaseHarvester):
 
         return tags
 
-    def _search_city(self, city_name: str, country: str) -> Optional[Dict]:
+    def _search_city(self, city_name: str, country: str) -> dict | None:
         """Search for city in GeoNames."""
         params = {
             "q": city_name,
@@ -102,7 +99,7 @@ class GeoNamesHarvester(BaseHarvester):
 
         return None
 
-    def _get_nearby_features(self, geoname_id: int) -> List[Dict]:
+    def _get_nearby_features(self, geoname_id: int) -> list[dict]:
         """Get nearby features (attractions, landmarks)."""
         tags = []
 
@@ -132,7 +129,7 @@ class GeoNamesHarvester(BaseHarvester):
 
         return tags
 
-    def _map_feature_code(self, fcode: str, fclass: str) -> List[Dict]:
+    def _map_feature_code(self, fcode: str, fclass: str) -> list[dict]:
         """
         Map GeoNames feature codes to travel purpose tags.
 

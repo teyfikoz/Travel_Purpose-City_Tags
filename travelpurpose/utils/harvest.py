@@ -22,11 +22,11 @@ class HarvestConfig:
     def __init__(
         self,
         rate_limit: float = 1.0,
-        timeout: int = 10,
-        max_retries: int = 3,
-        retry_backoff: float = 2.0,
+        timeout: int = 5,
+        max_retries: int = 2,
+        retry_backoff: float = 1.5,
         cache_ttl: int = 86400,  # 24 hours
-        user_agent: str = "TravelPurpose/0.1.0 (https://github.com/teyfikoz/Travel_Purpose-City_Tags)",
+        user_agent: str = "TravelPurpose/0.2.0 (https://github.com/teyfikoz/Travel_Purpose-City_Tags)",
         respect_robots_txt: bool = True,
     ):
         """

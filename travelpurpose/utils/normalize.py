@@ -332,3 +332,122 @@ def extract_headings(html_content: str) -> list[str]:
     except Exception as e:
         logger.error(f"Failed to extract headings: {e}")
         return []
+
+
+# Fallback knowledge base for common cities (to ensure non-empty results)
+FALLBACK_CITY_DATA = {
+    "paris": {
+        "main": ["Culture_Heritage", "Leisure", "Business"],
+        "sub": ["UNESCO_Site", "Museums", "Architecture", "Luxury", "Gastronomy", "Romantic"],
+        "confidence": 0.75,
+    },
+    "london": {
+        "main": ["Culture_Heritage", "Business", "Leisure"],
+        "sub": ["Museums", "Architecture", "Finance_Hub", "Shopping", "Gastronomy"],
+        "confidence": 0.75,
+    },
+    "tokyo": {
+        "main": ["Culture_Heritage", "Business", "Leisure"],
+        "sub": ["Tech_Hub", "Shopping", "Gastronomy", "Museums"],
+        "confidence": 0.75,
+    },
+    "new york": {
+        "main": ["Business", "Culture_Heritage", "Leisure"],
+        "sub": ["Finance_Hub", "Museums", "Shopping", "Gastronomy", "Nightlife_Entertainment"],
+        "confidence": 0.75,
+    },
+    "dubai": {
+        "main": ["Leisure", "Business", "Transit_Gateway"],
+        "sub": ["Luxury", "Shopping", "Mega_Air_Hub", "Beach_Resort"],
+        "confidence": 0.75,
+    },
+    "barcelona": {
+        "main": ["Culture_Heritage", "Leisure", "Beach_Resort"],
+        "sub": ["UNESCO_Site", "Architecture", "Beachfront", "Gastronomy"],
+        "confidence": 0.75,
+    },
+    "amsterdam": {
+        "main": ["Culture_Heritage", "Leisure"],
+        "sub": ["Museums", "Architecture", "City_Break"],
+        "confidence": 0.70,
+    },
+    "rome": {
+        "main": ["Culture_Heritage", "Leisure"],
+        "sub": ["UNESCO_Site", "Relics", "Architecture", "Gastronomy"],
+        "confidence": 0.80,
+    },
+    "vienna": {
+        "main": ["Culture_Heritage", "Leisure"],
+        "sub": ["UNESCO_Site", "Museums", "Architecture", "Performing_Arts"],
+        "confidence": 0.75,
+    },
+    "istanbul": {
+        "main": ["Culture_Heritage", "Transit_Gateway", "Leisure"],
+        "sub": ["UNESCO_Site", "Old_Town", "Mega_Air_Hub", "Gastronomy"],
+        "confidence": 0.80,
+    },
+    "singapore": {
+        "main": ["Business", "Transit_Gateway", "Leisure"],
+        "sub": ["Finance_Hub", "Mega_Air_Hub", "Shopping", "Gastronomy"],
+        "confidence": 0.75,
+    },
+    "hong kong": {
+        "main": ["Business", "Leisure", "Transit_Gateway"],
+        "sub": ["Finance_Hub", "Shopping", "Gastronomy", "Mega_Air_Hub"],
+        "confidence": 0.75,
+    },
+    "sydney": {
+        "main": ["Leisure", "Beach_Resort", "Culture_Heritage"],
+        "sub": ["Beachfront", "Architecture", "Gastronomy"],
+        "confidence": 0.70,
+    },
+    "bangkok": {
+        "main": ["Leisure", "Culture_Heritage", "Medical_Health"],
+        "sub": ["Gastronomy", "Shopping", "Old_Town", "Wellness_Spa"],
+        "confidence": 0.75,
+    },
+    "mecca": {
+        "main": ["Religious_Pilgrimage"],
+        "sub": ["Islamic_Pilgrimage"],
+        "confidence": 0.95,
+    },
+    "medina": {
+        "main": ["Religious_Pilgrimage"],
+        "sub": ["Islamic_Pilgrimage"],
+        "confidence": 0.95,
+    },
+    "las vegas": {
+        "main": ["Nightlife_Entertainment", "Leisure"],
+        "sub": ["Casinos", "Party_District"],
+        "confidence": 0.85,
+    },
+    "miami": {
+        "main": ["Beach_Resort", "Nightlife_Entertainment", "Leisure"],
+        "sub": ["Beachfront", "Party_District", "Luxury"],
+        "confidence": 0.75,
+    },
+    "bali": {
+        "main": ["Beach_Resort", "Leisure", "Culture_Heritage"],
+        "sub": ["Island", "Wellness_Spa", "Surfing"],
+        "confidence": 0.80,
+    },
+    "maldives": {
+        "main": ["Beach_Resort", "Leisure"],
+        "sub": ["Island", "Diving_Spots", "All_Inclusive", "Luxury"],
+        "confidence": 0.85,
+    },
+}
+
+
+def get_fallback_data(city_name: str) -> dict | None:
+    """
+    Get fallback data for a city from the knowledge base.
+
+    Args:
+        city_name: City name to look up
+
+    Returns:
+        Dictionary with main, sub, and confidence, or None if not found
+    """
+    city_norm = normalize_city_name(city_name)
+    return FALLBACK_CITY_DATA.get(city_norm)

@@ -113,10 +113,12 @@ def predict_purpose(city_name: str, use_cache: bool = True) -> dict:
         if len(matches) > 0:
             city_row = matches.iloc[0]
             # Extract NBD purposes if available
-            if "purpose" in city_row and pd.notna(city_row["purpose"]):
-                nbd_purposes = [city_row["purpose"]]
+            purpose_val = city_row.get("purpose")
+            if purpose_val is not None and not (isinstance(purpose_val, float) and pd.isna(purpose_val)):
+                nbd_purposes = [purpose_val]
             # Check if already classified
-            if "main_categories" in city_row and pd.notna(city_row["main_categories"]):
+            main_cats = city_row.get("main_categories")
+            if main_cats is not None and not (isinstance(main_cats, float) and pd.isna(main_cats)):
                 return {
                     "main": (
                         city_row["main_categories"]
@@ -131,8 +133,17 @@ def predict_purpose(city_name: str, use_cache: bool = True) -> dict:
                     "confidence": city_row.get("confidence", 0.8),
                 }
 
-    # Harvest tags
+    # Harvest tags with improved timeout handling
     tags = get_tags_for_city(city_name, use_cache=use_cache)
+
+    # Use fallback knowledge base if no tags found
+    if not tags and not nbd_purposes:
+        logger.info(f"No tags found, trying fallback knowledge base for: {city_name}")
+        from travelpurpose.utils.normalize import get_fallback_data
+        fallback_result = get_fallback_data(city_name)
+        if fallback_result:
+            logger.info(f"Using fallback data for {city_name}")
+            return fallback_result
 
     if not tags and not nbd_purposes:
         logger.warning(f"No data found for city: {city_name}")

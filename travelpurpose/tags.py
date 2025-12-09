@@ -65,7 +65,7 @@ def get_tags_for_city(
         ]
 
     all_tags = []
-    config = HarvestConfig(rate_limit=1.5)  # Conservative rate limit
+    config = HarvestConfig(rate_limit=1.0, timeout=3, max_retries=1)  # Faster configuration
 
     # Harvest from each source
     if "wikidata" in sources:

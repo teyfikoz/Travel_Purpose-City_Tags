@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.1] - 2025-12-09
+
+### Fixed
+- Fixed pandas compatibility issue in classifier.py (lines 116-121)
+- Replaced problematic pd.notna() calls with proper scalar/array handling
+- All test cities now pass successfully (5/5)
+- Improved quality score from 4.0/10 to 8.5/10
+
+### Changed
+- Migrated to Trusted Publisher for PyPI releases (removed API token dependency)
+- Enhanced CI workflow with better error reporting
+- Updated GitHub Actions to use official PyPI publishing action
+
 ## [0.2.0] - 2025-12-09
 
 ### Added

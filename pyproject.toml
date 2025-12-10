@@ -69,9 +69,10 @@ tpurpose = "travelpurpose.cli:app"
 
 [tool.setuptools]
 packages = ["travelpurpose", "travelpurpose.utils"]
+include-package-data = true
 
 [tool.setuptools.package-data]
-travelpurpose = ["data/*.parquet", "data/*.json", "ontology/*.yaml"]
+travelpurpose = ["data/*.json", "data/*.parquet", "ontology/*.yaml"]
 
 [tool.ruff]
 line-length = 100

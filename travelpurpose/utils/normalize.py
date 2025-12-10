@@ -338,7 +338,14 @@ def extract_headings(html_content: str) -> list[str]:
 FALLBACK_CITY_DATA = {
     "paris": {
         "main": ["Culture_Heritage", "Leisure", "Business"],
-        "sub": ["UNESCO_Site", "Museums", "Architecture", "Luxury", "Gastronomy", "Romantic"],
+        "sub": [
+            "UNESCO_Site",
+            "Museums",
+            "Architecture",
+            "Luxury",
+            "Gastronomy",
+            "Romantic",
+        ],
         "confidence": 0.75,
     },
     "london": {
@@ -353,7 +360,13 @@ FALLBACK_CITY_DATA = {
     },
     "new york": {
         "main": ["Business", "Culture_Heritage", "Leisure"],
-        "sub": ["Finance_Hub", "Museums", "Shopping", "Gastronomy", "Nightlife_Entertainment"],
+        "sub": [
+            "Finance_Hub",
+            "Museums",
+            "Shopping",
+            "Gastronomy",
+            "Nightlife_Entertainment",
+        ],
         "confidence": 0.75,
     },
     "dubai": {

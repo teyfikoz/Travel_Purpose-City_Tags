@@ -114,11 +114,15 @@ def predict_purpose(city_name: str, use_cache: bool = True) -> dict:
             city_row = matches.iloc[0]
             # Extract NBD purposes if available
             purpose_val = city_row.get("purpose")
-            if purpose_val is not None and not (isinstance(purpose_val, float) and pd.isna(purpose_val)):
+            if purpose_val is not None and not (
+                isinstance(purpose_val, float) and pd.isna(purpose_val)
+            ):
                 nbd_purposes = [purpose_val]
             # Check if already classified
             main_cats = city_row.get("main_categories")
-            if main_cats is not None and not (isinstance(main_cats, float) and pd.isna(main_cats)):
+            if main_cats is not None and not (
+                isinstance(main_cats, float) and pd.isna(main_cats)
+            ):
                 return {
                     "main": (
                         city_row["main_categories"]
@@ -140,6 +144,7 @@ def predict_purpose(city_name: str, use_cache: bool = True) -> dict:
     if not tags and not nbd_purposes:
         logger.info(f"No tags found, trying fallback knowledge base for: {city_name}")
         from travelpurpose.utils.normalize import get_fallback_data
+
         fallback_result = get_fallback_data(city_name)
         if fallback_result:
             logger.info(f"Using fallback data for {city_name}")

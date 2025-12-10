@@ -35,6 +35,13 @@ jobs:
         pip install -e ".[dev]"
         pip list  # Show installed packages for debugging
 
+    - name: Debug - Check data files
+      run: |
+        echo "=== Checking installed package structure ==="
+        python -c "import travelpurpose; import os; print('Package location:', os.path.dirname(travelpurpose.__file__))"
+        python -c "import os; import travelpurpose; pkg_dir = os.path.dirname(travelpurpose.__file__); print('Data dir exists:', os.path.exists(os.path.join(pkg_dir, 'data'))); print('Ontology dir exists:', os.path.exists(os.path.join(pkg_dir, 'ontology')))"
+        python -c "import os; import travelpurpose; pkg_dir = os.path.dirname(travelpurpose.__file__); data_dir = os.path.join(pkg_dir, 'data'); print('Data files:', os.listdir(data_dir) if os.path.exists(data_dir) else 'NOT FOUND')"
+
     - name: Lint with ruff
       run: |
         ruff check travelpurpose/ tests/
@@ -50,7 +57,9 @@ jobs:
 
     - name: Run tests with pytest
       run: |
-        pytest -v --tb=short --cov=travelpurpose --cov-report=xml --cov-report=term-missing
+        # Run tests with even more verbose output
+        pytest -vv --tb=long --cov=travelpurpose --cov-report=xml --cov-report=term-missing -x
+      continue-on-error: false
 
     - name: Upload coverage to Codecov
       if: matrix.python-version == '3.11'

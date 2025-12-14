@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "travelpurpose"
-version = "0.2.2"
+version = "0.2.3"
 description = "Production-grade library for classifying world cities by travel purpose using multi-source data"
 authors = [
     {name = "Teyfik OZ", email = "teyfikoz@example.com"}

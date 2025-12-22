@@ -154,7 +154,7 @@ def predict_purpose(
             if main_cats is not None and not (
                 isinstance(main_cats, float) and pd.isna(main_cats)
             ):
-                return {
+                base_result = {
                     "main": (
                         city_row["main_categories"]
                         if isinstance(city_row["main_categories"], list)
@@ -167,6 +167,18 @@ def predict_purpose(
                     ),
                     "confidence": city_row.get("confidence", 0.8),
                 }
+                if explain:
+                    base_result.update({
+                        "ambiguity_score": 0.1,
+                        "confidence_level": "High",
+                        "explanation": {
+                            "why": ["Returned from cached dataset"],
+                            "confidence_breakdown": {
+                                "cache_confidence": 1.0
+                            }
+                        }
+                    })
+                return base_result
 
     # Harvest tags with improved timeout handling and offline mode support
     tags = get_tags_for_city(city_name, use_cache=use_cache, offline_mode=offline_mode)

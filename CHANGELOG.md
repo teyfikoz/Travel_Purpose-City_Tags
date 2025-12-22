@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.3] - 2024-12-22
+
+### Fixed
+- **explain=True Fields** - Fixed missing explanation fields for cached dataset results
+- Added `ambiguity_score`, `confidence_level`, and `explanation` to cached predictions
+- Ensures consistent API response structure regardless of cache status
+
+### Changed
+- `travelpurpose/classifier.py` (lines 157-181): Added explain field population for cached results
+
+### Impact
+- explain=True now works consistently across cached and fresh predictions
+- Better debugging and transparency for production use cases
+
 ## [2.0.2] - 2024-12-22
 
 ### Fixed

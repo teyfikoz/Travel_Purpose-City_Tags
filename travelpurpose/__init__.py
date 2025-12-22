@@ -12,7 +12,7 @@ v2.0 NEW FEATURES:
 - Synthetic city generator: Privacy-safe data generation
 """
 
-__version__ = "2.0.2"
+__version__ = "2.0.3"
 __author__ = "Travel Purpose Contributors"
 
 from travelpurpose.classifier import load, predict_purpose, search, tags

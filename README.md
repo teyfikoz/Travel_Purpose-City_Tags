@@ -6,12 +6,66 @@
 
 A production-grade Python library for classifying world cities by travel purpose using multi-source data from public travel platforms and knowledge bases.
 
+## 🆕 What's New in v2.0.1 (Aralık 2024)
+
+**Production-Ready Enhancements**:
+- ✅ **Enhanced PyPI Description**: Better discoverability with clearer value propositions
+- ✅ **Offline-First**: All core features work without network access (uses cached data)
+- ✅ **Ethical Harvesting**: 100% ToS-compliant multi-source data collection
+- ✅ **Performance Optimized**: Faster predictions with improved caching
+- ✅ **Type Safety**: Complete type hints for better IDE support
+
+**What Makes TravelPurpose Production-Grade**:
+```python
+# Explainable predictions - understand WHY
+result = predict_purpose("Istanbul", explain=True)
+print(result['explanation'])  # Human-readable reasons
+
+# Seasonal awareness - purposes change with time
+summer = predict_purpose("Antalya", season="summer")  # Beach boosted
+winter = predict_purpose("St. Moritz", season="winter")  # Ski boosted
+
+# Offline-first - works without network
+result = predict_purpose("Paris", use_cache=True)  # Uses local data
+```
+
+**Production Benefits**:
+- 🚀 **No API Costs**: 100% local ML, no external API dependencies
+- 🔒 **Privacy-Safe**: Synthetic data generator for testing
+- 📊 **Transparent**: Full explainability with confidence breakdowns
+- ⚡ **Fast**: Cached predictions, optimized for production
+
+## 🆕 What's New in v2.0
+
+**Explainable AI** - Understand WHY predictions are made:
+- **`explain=True`**: Get ambiguity scores, confidence breakdowns, and human-readable explanations
+- **Temporal Awareness**: Purposes change with seasons (`month=7` for summer travel)
+- **City Fingerprints**: Unique purpose signatures for each city
+- **Confidence Decomposition**: See what contributes to each prediction
+- **Synthetic Data Generator**: Privacy-safe data for testing and research
+
+```python
+# v2.0 NEW: Explainable predictions
+result = predict_purpose("Istanbul", explain=True)
+print(result['ambiguity_score'])  # 0.32 - moderate ambiguity
+print(result['explanation']['reasons'])
+# ['High cross-source agreement', 'UNESCO/Heritage site boost', ...]
+
+# v2.0 NEW: Seasonal awareness
+summer_purposes = predict_purpose("Antalya", month=7)  # Beach boosted in summer
+winter_purposes = predict_purpose("St. Moritz", season="winter")  # Ski boosted
+```
+
 ## Features
 
 - **Multi-Label Classification**: Cities can have multiple travel purposes (e.g., Business + Culture + Transit)
 - **Rich Ontology**: 12 main categories and 70+ subcategories covering all travel purposes
 - **Multi-Source Data**: Integrates data from Wikidata, Booking.com, Agoda, Trivago, Kayak, Trip.com, and Skyscanner
 - **Hybrid Classifier**: Combines rule-based and embedding-based approaches with confidence scoring
+- **🆕 Explainable AI**: Ambiguity scores, confidence decomposition, human-readable explanations
+- **🆕 Temporal Awareness**: Seasonal purpose adjustments (e.g., beach cities in summer)
+- **🆕 City Fingerprints**: Unique purpose signatures for similarity analysis
+- **🆕 Synthetic Data**: Privacy-safe data generation for testing and research
 - **Python API & CLI**: Easy-to-use programmatic and command-line interfaces
 - **Ethical Data Collection**: Fully compliant with ToS, respects robots.txt, implements rate limiting
 - **Production Ready**: Comprehensive tests, CI/CD, type hints, logging, caching

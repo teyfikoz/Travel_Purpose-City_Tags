@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.2] - 2024-12-22
+
+### Fixed
+- **CRITICAL: Offline Mode Implementation** - Fixed network dependency issue
+- Added `offline_mode` parameter to `predict_purpose()` and `get_tags_for_city()`
+- Auto-detection of sandbox environments (CI, pytest, `TRAVELPURPOSE_OFFLINE=1`)
+- Cache-only fallback when offline (no network attempts on cache miss)
+- Graceful failure with info logging instead of crashes
+
+### Changed
+- `travelpurpose/tags.py` (lines 28-70): Added offline mode with auto-detection
+- `travelpurpose/classifier.py` (lines 90-172): Propagated offline_mode parameter
+
+### Impact
+- Production environments no longer fail due to network restrictions
+- Test environments work without network access
+- Better handling of restricted sandbox environments
+
 ## [0.2.1] - 2025-12-09
 
 ### Fixed

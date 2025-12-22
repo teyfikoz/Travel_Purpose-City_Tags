@@ -4,15 +4,15 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "travelpurpose"
-version = "0.2.4"
-description = "Production-grade library for classifying world cities by travel purpose using multi-source data"
+version = "2.0.2"
+description = "Production-Grade Explainable AI for city travel purpose classification: temporal/seasonal awareness, city fingerprints, confidence decomposition, synthetic data generation - 100% ethical multi-source harvesting, offline-first!"
 authors = [
     {name = "Teyfik OZ", email = "teyfikoz@example.com"}
 ]
 readme = "README.md"
 license = {text = "MIT"}
 requires-python = ">=3.10"
-keywords = ["travel", "city", "classification", "tourism", "purpose", "tags", "data-engineering"]
+keywords = ["travel", "city", "classification", "tourism", "purpose", "tags", "data-engineering", "explainable-ai", "temporal", "fingerprint", "synthetic-data", "confidence-scoring"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
@@ -22,8 +22,10 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Topic :: Scientific/Engineering :: Information Analysis",
     "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
 
 dependencies = [
@@ -68,7 +70,7 @@ Repository = "https://github.com/teyfikoz/Travel_Purpose-City_Tags"
 tpurpose = "travelpurpose.cli:app"
 
 [tool.setuptools]
-packages = ["travelpurpose", "travelpurpose.utils"]
+packages = ["travelpurpose", "travelpurpose.utils", "travelpurpose.synthetic"]
 include-package-data = true
 
 [tool.setuptools.package-data]

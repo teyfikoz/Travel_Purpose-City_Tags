@@ -2,6 +2,12 @@
 Main classifier module for travel purpose prediction.
 
 Provides the public API for city travel purpose classification.
+
+v2.0 NEW FEATURES:
+- Explainability (explain=True)
+- Temporal/seasonal awareness
+- City fingerprints
+- Confidence decomposition
 """
 
 import logging
@@ -19,6 +25,11 @@ from travelpurpose.utils.scoring import (
     normalize_scores,
     select_top_labels,
 )
+
+# v2.0 imports
+from travelpurpose.explainability import ExplainabilityEngine
+from travelpurpose.temporal import TemporalEngine
+from travelpurpose.fingerprint import CityFingerprint
 
 logger = logging.getLogger(__name__)
 
@@ -76,13 +87,25 @@ def load():
     logger.info("Data loading complete")
 
 
-def predict_purpose(city_name: str, use_cache: bool = True) -> dict:
+def predict_purpose(
+    city_name: str,
+    use_cache: bool = True,
+    month: int = None,
+    season: str = None,
+    explain: bool = False,
+    offline_mode: bool = None
+) -> dict:
     """
-    Predict travel purposes for a city.
+    Predict travel purposes for a city - ENHANCED v2.0
 
     Args:
         city_name: Name of the city
         use_cache: Whether to use cached data (default: True)
+        month: Month (1-12) for seasonal adjustment (v2.0 NEW)
+        season: Season name ('winter'/'spring'/'summer'/'fall') (v2.0 NEW)
+        explain: Include explainability details (v2.0 NEW)
+        offline_mode: If True, work WITHOUT network access (v2.0.1 NEW).
+                     If None, auto-detect from environment (CI, PYTEST, TRAVELPURPOSE_OFFLINE)
 
     Returns:
         Dictionary with:
@@ -91,12 +114,20 @@ def predict_purpose(city_name: str, use_cache: bool = True) -> dict:
         - confidence: Overall confidence score (0-1)
         - scores: Detailed scores for debugging (optional)
 
+        v2.0 NEW (if explain=True):
+        - ambiguity_score: Uncertainty measure (0-1)
+        - confidence_breakdown: Component analysis
+        - explanation: Human-readable reasons
+        - fingerprint: City purpose fingerprint
+
     Example:
-        >>> predict_purpose("Istanbul")
+        >>> predict_purpose("Istanbul", explain=True)
         {
             'main': ['Culture_Heritage', 'Transit_Gateway', 'Leisure'],
             'sub': ['UNESCO_Site', 'Old_Town', 'Mega_Air_Hub', 'Gastronomy'],
-            'confidence': 0.86
+            'confidence': 0.86,
+            'ambiguity_score': 0.32,
+            'explanation': {...}
         }
     """
     if not _DATA_LOADED:
@@ -137,8 +168,8 @@ def predict_purpose(city_name: str, use_cache: bool = True) -> dict:
                     "confidence": city_row.get("confidence", 0.8),
                 }
 
-    # Harvest tags with improved timeout handling
-    tags = get_tags_for_city(city_name, use_cache=use_cache)
+    # Harvest tags with improved timeout handling and offline mode support
+    tags = get_tags_for_city(city_name, use_cache=use_cache, offline_mode=offline_mode)
 
     # Use fallback knowledge base if no tags found
     if not tags and not nbd_purposes:
@@ -175,6 +206,13 @@ def predict_purpose(city_name: str, use_cache: bool = True) -> dict:
     main_scores = normalize_scores(main_scores)
     sub_scores = normalize_scores(sub_scores)
 
+    # v2.0 NEW: Apply temporal/seasonal boost if provided
+    if month or season:
+        main_scores = TemporalEngine.apply_seasonal_boost(
+            main_scores, season=season, month=month
+        )
+        logger.info(f"Applied seasonal boost for {'month ' + str(month) if month else season}")
+
     # Calculate confidence
     confidence = calculate_confidence(main_scores, sub_scores)
 
@@ -187,6 +225,50 @@ def predict_purpose(city_name: str, use_cache: bool = True) -> dict:
         "sub": [label for label, _ in top_sub],
         "confidence": round(confidence, 2),
     }
+
+    # v2.0 NEW: Add explainability if requested
+    if explain:
+        # Calculate ambiguity score
+        top_scores = [score for _, score in top_main]
+        ambiguity_score = ExplainabilityEngine.calculate_ambiguity(top_scores)
+
+        # Decompose confidence into components
+        # Calculate component values
+        num_sources = len(set(tag.get('source', 'unknown') for tag in tags))
+        source_agreement = min(num_sources / 5.0, 1.0) if tags else 0.0
+        ontology_strength = max(top_scores) if top_scores else 0.0
+        tag_density = min(len(tags) / 50.0, 1.0) if tags else 0.0
+        authority_weight = 0.15 if any('unesco' in label.lower() or 'heritage' in label.lower()
+                                      for label in result['main']) else 0.0
+
+        confidence_breakdown = ExplainabilityEngine.decompose_confidence(
+            source_agreement=source_agreement,
+            ontology_strength=ontology_strength,
+            tag_density=tag_density,
+            authority_weight=authority_weight,
+            ambiguity_penalty=ambiguity_score * 0.2
+        )
+
+        # Generate explanation
+        supporting_tags = [tag.get('tag', '') for tag in tags[:10]] if tags else []
+        explanation = ExplainabilityEngine.generate_explanation(
+            city=city_name,
+            prediction=result,
+            confidence_breakdown=confidence_breakdown,
+            ambiguity_score=ambiguity_score,
+            supporting_tags=supporting_tags
+        )
+
+        # Create city fingerprint
+        fingerprint = CityFingerprint.create_fingerprint(main_scores)
+
+        # Add to result
+        result['ambiguity_score'] = round(ambiguity_score, 4)
+        result['confidence_breakdown'] = confidence_breakdown
+        result['explanation'] = explanation['explanation']
+        result['fingerprint'] = fingerprint
+
+        logger.info(f"Generated explainability for {city_name}: ambiguity={ambiguity_score:.4f}")
 
     logger.info(f"Predicted purposes for {city_name}: {result['main']}")
     return result

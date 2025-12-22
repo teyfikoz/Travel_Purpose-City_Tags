@@ -29,6 +29,7 @@ def get_tags_for_city(
     city_name: str,
     sources: list[str] | None = None,
     use_cache: bool = True,
+    offline_mode: bool = None,
 ) -> list[dict]:
     """
     Get all tags for a city from various sources.
@@ -36,12 +37,23 @@ def get_tags_for_city(
     Args:
         city_name: City name to search for
         sources: List of source names to use (default: all)
-        use_cache: Whether to use cached data first
+        use_cache: Whether to use cached data first (default: True)
+        offline_mode: If True, ONLY use cache, no network requests.
+                     If None, auto-detect from environment (CI, PYTEST, TRAVELPURPOSE_OFFLINE)
 
     Returns:
         List of tag dictionaries with source information
     """
+    import os
     global _TAGS_CACHE
+
+    # Auto-detect offline mode from environment
+    if offline_mode is None:
+        offline_mode = (
+            os.environ.get('TRAVELPURPOSE_OFFLINE') == '1' or
+            os.environ.get('CI') == 'true' or
+            os.environ.get('PYTEST_CURRENT_TEST') is not None
+        )
 
     # Try cache first
     if use_cache and _TAGS_CACHE is not None:
@@ -51,6 +63,11 @@ def get_tags_for_city(
         ]
         if len(matches) > 0:
             return matches.to_dict("records")
+
+    # In offline mode, return empty if cache miss
+    if offline_mode:
+        logger.info(f"Offline mode: No cached tags for {city_name}, skipping network harvest")
+        return []
 
     # Default sources
     if sources is None:

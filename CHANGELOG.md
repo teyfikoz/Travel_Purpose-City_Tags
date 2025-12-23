@@ -7,6 +7,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.4] - 2025-12-23
+
+### 🐛 BUG FIXES: Offline Mode API Consistency
+
+#### Fixed
+- **tags() Function**: Added `offline_mode` parameter to `tags()` function
+  - Now accepts `offline_mode` parameter for consistency with `predict_purpose()`
+  - Auto-detects offline environment from `TRAVELPURPOSE_OFFLINE=1`
+  - Passes offline_mode to `get_tags_for_city()` for proper handling
+
+#### Enhanced
+- **API Consistency**: All public functions now support offline mode
+  - `predict_purpose(offline_mode=...)` - already had support
+  - `tags(offline_mode=...)` - NOW added in v2.0.4
+  - Consistent API across the entire library
+
+#### Changed
+- `travelpurpose/classifier.py` (line 289): Added `offline_mode` parameter to `tags()` function signature
+- `travelpurpose/classifier.py` (line 312): Passed `offline_mode` to `get_tags_for_city()`
+
+#### Impact
+- Users can now explicitly control offline behavior for tags() function
+- Better consistency across library API
+- Improved offline-first architecture
+
+---
+
 ## [2.0.3] - 2024-12-22
 
 ### Fixed

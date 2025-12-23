@@ -286,13 +286,15 @@ def predict_purpose(
     return result
 
 
-def tags(city_name: str, use_cache: bool = True) -> list[dict]:
+def tags(city_name: str, use_cache: bool = True, offline_mode: bool = None) -> list[dict]:
     """
     Get raw harvested tags for a city.
 
     Args:
         city_name: Name of the city
         use_cache: Whether to use cached data
+        offline_mode: If True, work WITHOUT network access (v2.0.4 NEW).
+                     If None, auto-detect from environment (CI, PYTEST, TRAVELPURPOSE_OFFLINE)
 
     Returns:
         List of tag dictionaries with source information
@@ -307,7 +309,7 @@ def tags(city_name: str, use_cache: bool = True) -> list[dict]:
     if not _DATA_LOADED:
         load()
 
-    return get_tags_for_city(city_name, use_cache=use_cache)
+    return get_tags_for_city(city_name, use_cache=use_cache, offline_mode=offline_mode)
 
 
 def search(query: str) -> list[dict]:

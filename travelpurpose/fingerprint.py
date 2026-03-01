@@ -1,6 +1,7 @@
 """
 City Purpose Fingerprint (CPF) v2.0
 """
+
 import math
 
 import numpy as np
@@ -15,7 +16,7 @@ class CityFingerprint:
         return {
             "main_categories": purposes,
             "entropy": round(entropy, 4),
-            "uniqueness": round(uniqueness, 4)
+            "uniqueness": round(uniqueness, 4),
         }
 
     @staticmethod
@@ -33,8 +34,8 @@ class CityFingerprint:
 
     @staticmethod
     def cosine_similarity(fp1: dict, fp2: dict) -> float:
-        cats1 = fp1.get('main_categories', {})
-        cats2 = fp2.get('main_categories', {})
+        cats1 = fp1.get("main_categories", {})
+        cats2 = fp2.get("main_categories", {})
 
         all_cats = set(cats1.keys()) | set(cats2.keys())
         v1 = np.array([cats1.get(c, 0) for c in all_cats])

@@ -92,7 +92,7 @@ def predict_purpose(
     month: int = None,
     season: str = None,
     explain: bool = False,
-    offline_mode: bool = None
+    offline_mode: bool = None,
 ) -> dict:
     """
     Predict travel purposes for a city - ENHANCED v2.0
@@ -167,16 +167,16 @@ def predict_purpose(
                     "confidence": city_row.get("confidence", 0.8),
                 }
                 if explain:
-                    base_result.update({
-                        "ambiguity_score": 0.1,
-                        "confidence_level": "High",
-                        "explanation": {
-                            "why": ["Returned from cached dataset"],
-                            "confidence_breakdown": {
-                                "cache_confidence": 1.0
-                            }
+                    base_result.update(
+                        {
+                            "ambiguity_score": 0.1,
+                            "confidence_level": "High",
+                            "explanation": {
+                                "why": ["Returned from cached dataset"],
+                                "confidence_breakdown": {"cache_confidence": 1.0},
+                            },
                         }
-                    })
+                    )
                 return base_result
 
     # Harvest tags with improved timeout handling and offline mode support
@@ -222,7 +222,9 @@ def predict_purpose(
         main_scores = TemporalEngine.apply_seasonal_boost(
             main_scores, season=season, month=month
         )
-        logger.info(f"Applied seasonal boost for {'month ' + str(month) if month else season}")
+        logger.info(
+            f"Applied seasonal boost for {'month ' + str(month) if month else season}"
+        )
 
     # Calculate confidence
     confidence = calculate_confidence(main_scores, sub_scores)
@@ -245,47 +247,57 @@ def predict_purpose(
 
         # Decompose confidence into components
         # Calculate component values
-        num_sources = len(set(tag.get('source', 'unknown') for tag in tags))
+        num_sources = len(set(tag.get("source", "unknown") for tag in tags))
         source_agreement = min(num_sources / 5.0, 1.0) if tags else 0.0
         ontology_strength = max(top_scores) if top_scores else 0.0
         tag_density = min(len(tags) / 50.0, 1.0) if tags else 0.0
-        authority_weight = 0.15 if any('unesco' in label.lower() or 'heritage' in label.lower()
-                                      for label in result['main']) else 0.0
+        authority_weight = (
+            0.15
+            if any(
+                "unesco" in label.lower() or "heritage" in label.lower()
+                for label in result["main"]
+            )
+            else 0.0
+        )
 
         confidence_breakdown = ExplainabilityEngine.decompose_confidence(
             source_agreement=source_agreement,
             ontology_strength=ontology_strength,
             tag_density=tag_density,
             authority_weight=authority_weight,
-            ambiguity_penalty=ambiguity_score * 0.2
+            ambiguity_penalty=ambiguity_score * 0.2,
         )
 
         # Generate explanation
-        supporting_tags = [tag.get('tag', '') for tag in tags[:10]] if tags else []
+        supporting_tags = [tag.get("tag", "") for tag in tags[:10]] if tags else []
         explanation = ExplainabilityEngine.generate_explanation(
             city=city_name,
             prediction=result,
             confidence_breakdown=confidence_breakdown,
             ambiguity_score=ambiguity_score,
-            supporting_tags=supporting_tags
+            supporting_tags=supporting_tags,
         )
 
         # Create city fingerprint
         fingerprint = CityFingerprint.create_fingerprint(main_scores)
 
         # Add to result
-        result['ambiguity_score'] = round(ambiguity_score, 4)
-        result['confidence_breakdown'] = confidence_breakdown
-        result['explanation'] = explanation['explanation']
-        result['fingerprint'] = fingerprint
+        result["ambiguity_score"] = round(ambiguity_score, 4)
+        result["confidence_breakdown"] = confidence_breakdown
+        result["explanation"] = explanation["explanation"]
+        result["fingerprint"] = fingerprint
 
-        logger.info(f"Generated explainability for {city_name}: ambiguity={ambiguity_score:.4f}")
+        logger.info(
+            f"Generated explainability for {city_name}: ambiguity={ambiguity_score:.4f}"
+        )
 
     logger.info(f"Predicted purposes for {city_name}: {result['main']}")
     return result
 
 
-def tags(city_name: str, use_cache: bool = True, offline_mode: bool = None) -> list[dict]:
+def tags(
+    city_name: str, use_cache: bool = True, offline_mode: bool = None
+) -> list[dict]:
     """
     Get raw harvested tags for a city.
 

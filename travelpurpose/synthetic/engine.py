@@ -1,6 +1,7 @@
 """
 Synthetic City Purpose Generator
 """
+
 import json
 import math
 import random
@@ -15,6 +16,7 @@ class SyntheticCityConfig:
     seasonal_variance: float = 0.2
     authority_boost: float = 1.3
     output_path: str = "synthetic_cities.jsonl"
+
 
 class SyntheticCityEngine:
     def __init__(self, rng_seed: int = 42):
@@ -38,7 +40,7 @@ class SyntheticCityEngine:
             {
                 "city_id": f"synthetic_{i}",
                 "purpose_profile": self.generate_city(base_distribution),
-                "entropy": self._entropy(self.generate_city(base_distribution))
+                "entropy": self._entropy(self.generate_city(base_distribution)),
             }
             for i in range(n)
         ]
@@ -47,6 +49,6 @@ class SyntheticCityEngine:
         return -sum(p * math.log(p + 1e-9) for p in dist.values() if p > 0)
 
     def export(self, cities: list[dict], output_path: str):
-        with open(output_path, 'w') as f:
+        with open(output_path, "w") as f:
             for city in cities:
-                f.write(json.dumps(city) + '\n')
+                f.write(json.dumps(city) + "\n")

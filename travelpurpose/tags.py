@@ -45,14 +45,15 @@ def get_tags_for_city(
         List of tag dictionaries with source information
     """
     import os
+
     global _TAGS_CACHE
 
     # Auto-detect offline mode from environment
     if offline_mode is None:
         offline_mode = (
-            os.environ.get('TRAVELPURPOSE_OFFLINE') == '1' or
-            os.environ.get('CI') == 'true' or
-            os.environ.get('PYTEST_CURRENT_TEST') is not None
+            os.environ.get("TRAVELPURPOSE_OFFLINE") == "1"
+            or os.environ.get("CI") == "true"
+            or os.environ.get("PYTEST_CURRENT_TEST") is not None
         )
 
     # Try cache first
@@ -66,7 +67,9 @@ def get_tags_for_city(
 
     # In offline mode, return empty if cache miss
     if offline_mode:
-        logger.info(f"Offline mode: No cached tags for {city_name}, skipping network harvest")
+        logger.info(
+            f"Offline mode: No cached tags for {city_name}, skipping network harvest"
+        )
         return []
 
     # Default sources

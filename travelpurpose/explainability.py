@@ -1,6 +1,7 @@
 """
 TravelPurpose Explainability Layer v2.0
 """
+
 import math
 from typing import Any
 
@@ -12,14 +13,14 @@ class ExplainabilityEngine:
         ontology_strength: float = 0.0,
         tag_density: float = 0.0,
         authority_weight: float = 0.0,
-        ambiguity_penalty: float = 0.0
+        ambiguity_penalty: float = 0.0,
     ) -> dict[str, float]:
         components = {
             "source_agreement": source_agreement,
             "ontology_strength": ontology_strength,
             "tag_density": tag_density,
             "authority_weight": authority_weight,
-            "ambiguity_penalty": -ambiguity_penalty
+            "ambiguity_penalty": -ambiguity_penalty,
         }
 
         total_positive = sum(v for v in components.values() if v > 0)
@@ -51,14 +52,14 @@ class ExplainabilityEngine:
         prediction: dict,
         confidence_breakdown: dict[str, float],
         ambiguity_score: float,
-        supporting_tags: list[str] = None
+        supporting_tags: list[str] = None,
     ) -> dict[str, Any]:
         reasons = []
 
-        if confidence_breakdown.get('source_agreement', 0) > 0.2:
+        if confidence_breakdown.get("source_agreement", 0) > 0.2:
             reasons.append("High cross-source agreement")
 
-        if confidence_breakdown.get('authority_weight', 0) > 0.15:
+        if confidence_breakdown.get("authority_weight", 0) > 0.15:
             reasons.append("UNESCO/Heritage site boost")
 
         if supporting_tags:
@@ -73,6 +74,6 @@ class ExplainabilityEngine:
                 "reasons": reasons,
                 "confidence_breakdown": confidence_breakdown,
                 "ambiguity_score": round(ambiguity_score, 4),
-                "supporting_tags": supporting_tags or []
-            }
+                "supporting_tags": supporting_tags or [],
+            },
         }

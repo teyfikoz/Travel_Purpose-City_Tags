@@ -5,4 +5,4 @@ Privacy-safe synthetic city purpose profile generator
 
 from .engine import SyntheticCityConfig, SyntheticCityEngine
 
-__all__ = ['SyntheticCityEngine', 'SyntheticCityConfig']
+__all__ = ["SyntheticCityEngine", "SyntheticCityConfig"]

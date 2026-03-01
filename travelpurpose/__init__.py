@@ -12,16 +12,16 @@ v2.0 NEW FEATURES:
 - Synthetic city generator: Privacy-safe data generation
 """
 
-__version__ = "2.0.4"
+__version__ = "2.3.0"
 __author__ = "Travel Purpose Contributors"
 
 from travelpurpose.classifier import load, predict_purpose, search, tags
 
 # v2.0 NEW: Explainability and analytics modules
 from travelpurpose.explainability import ExplainabilityEngine
-from travelpurpose.temporal import TemporalEngine
 from travelpurpose.fingerprint import CityFingerprint
-from travelpurpose.synthetic.engine import SyntheticCityEngine, SyntheticCityConfig
+from travelpurpose.synthetic.engine import SyntheticCityConfig, SyntheticCityEngine
+from travelpurpose.temporal import TemporalEngine
 
 __all__ = [
     # Core API

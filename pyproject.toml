@@ -4,10 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "travelpurpose"
-version = "2.0.4"
+version = "2.3.0"
 description = "Production-Grade Explainable AI for city travel purpose classification: temporal/seasonal awareness, city fingerprints, confidence decomposition, synthetic data generation - 100% ethical multi-source harvesting, offline-first!"
 authors = [
-    {name = "Teyfik OZ", email = "teyfikoz@example.com"}
+    {name = "Teyfik OZ", email = "teyfikoz@yahoo.com"}
 ]
 readme = "README.md"
 license = {text = "MIT"}

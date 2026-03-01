@@ -2,12 +2,13 @@
 City Purpose Fingerprint (CPF) v2.0
 """
 import math
-from typing import Dict
+
 import numpy as np
+
 
 class CityFingerprint:
     @staticmethod
-    def create_fingerprint(purposes: Dict[str, float]) -> Dict:
+    def create_fingerprint(purposes: dict[str, float]) -> dict:
         entropy = CityFingerprint._calculate_entropy(purposes)
         uniqueness = CityFingerprint._calculate_uniqueness(purposes)
 
@@ -18,20 +19,20 @@ class CityFingerprint:
         }
 
     @staticmethod
-    def _calculate_entropy(dist: Dict[str, float]) -> float:
+    def _calculate_entropy(dist: dict[str, float]) -> float:
         probs = [p for p in dist.values() if p > 0]
         if not probs:
             return 0.0
         return -sum(p * math.log2(p) for p in probs)
 
     @staticmethod
-    def _calculate_uniqueness(dist: Dict[str, float]) -> float:
+    def _calculate_uniqueness(dist: dict[str, float]) -> float:
         # High uniqueness = more extreme distribution
         max_val = max(dist.values()) if dist else 0
         return max_val
 
     @staticmethod
-    def cosine_similarity(fp1: Dict, fp2: Dict) -> float:
+    def cosine_similarity(fp1: dict, fp2: dict) -> float:
         cats1 = fp1.get('main_categories', {})
         cats2 = fp2.get('main_categories', {})
 

@@ -1,7 +1,7 @@
 """
 TravelPurpose Temporal/Seasonal Support v2.0
 """
-from typing import Dict, Optional
+
 
 class TemporalEngine:
     SEASONS = {
@@ -20,10 +20,10 @@ class TemporalEngine:
 
     @staticmethod
     def apply_seasonal_boost(
-        purposes: Dict[str, float],
-        season: Optional[str] = None,
-        month: Optional[int] = None
-    ) -> Dict[str, float]:
+        purposes: dict[str, float],
+        season: str | None = None,
+        month: int | None = None
+    ) -> dict[str, float]:
         if month:
             season = TemporalEngine.get_season(month)
 

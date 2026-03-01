@@ -2,7 +2,8 @@
 TravelPurpose Explainability Layer v2.0
 """
 import math
-from typing import Dict, List, Any
+from typing import Any
+
 
 class ExplainabilityEngine:
     @staticmethod
@@ -12,7 +13,7 @@ class ExplainabilityEngine:
         tag_density: float = 0.0,
         authority_weight: float = 0.0,
         ambiguity_penalty: float = 0.0
-    ) -> Dict[str, float]:
+    ) -> dict[str, float]:
         components = {
             "source_agreement": source_agreement,
             "ontology_strength": ontology_strength,
@@ -30,7 +31,7 @@ class ExplainabilityEngine:
         return components
 
     @staticmethod
-    def calculate_ambiguity(probabilities: List[float]) -> float:
+    def calculate_ambiguity(probabilities: list[float]) -> float:
         if not probabilities or len(probabilities) == 1:
             return 0.0
 
@@ -47,24 +48,24 @@ class ExplainabilityEngine:
     @staticmethod
     def generate_explanation(
         city: str,
-        prediction: Dict,
-        confidence_breakdown: Dict[str, float],
+        prediction: dict,
+        confidence_breakdown: dict[str, float],
         ambiguity_score: float,
-        supporting_tags: List[str] = None
-    ) -> Dict[str, Any]:
+        supporting_tags: list[str] = None
+    ) -> dict[str, Any]:
         reasons = []
 
         if confidence_breakdown.get('source_agreement', 0) > 0.2:
-            reasons.append(f"High cross-source agreement")
+            reasons.append("High cross-source agreement")
 
         if confidence_breakdown.get('authority_weight', 0) > 0.15:
-            reasons.append(f"UNESCO/Heritage site boost")
+            reasons.append("UNESCO/Heritage site boost")
 
         if supporting_tags:
             reasons.append(f"Supported by tags: {', '.join(supporting_tags[:5])}")
 
         if ambiguity_score > 0.6:
-            reasons.append(f"⚠️ High ambiguity - city serves multiple purposes")
+            reasons.append("⚠️ High ambiguity - city serves multiple purposes")
 
         return {
             "city": city,

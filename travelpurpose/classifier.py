@@ -14,7 +14,11 @@ import logging
 
 import pandas as pd
 
+# v2.0 imports
+from travelpurpose.explainability import ExplainabilityEngine
+from travelpurpose.fingerprint import CityFingerprint
 from travelpurpose.tags import get_tags_for_city, load_tags_cache
+from travelpurpose.temporal import TemporalEngine
 from travelpurpose.utils.io import load_cities_data, load_nbd_mapping, load_ontology
 from travelpurpose.utils.normalize import normalize_city_name
 from travelpurpose.utils.scoring import (
@@ -25,11 +29,6 @@ from travelpurpose.utils.scoring import (
     normalize_scores,
     select_top_labels,
 )
-
-# v2.0 imports
-from travelpurpose.explainability import ExplainabilityEngine
-from travelpurpose.temporal import TemporalEngine
-from travelpurpose.fingerprint import CityFingerprint
 
 logger = logging.getLogger(__name__)
 

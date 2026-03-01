@@ -1,11 +1,11 @@
 """
 Synthetic City Purpose Generator
 """
-from dataclasses import dataclass
-import random
-import math
-from typing import Dict, List
 import json
+import math
+import random
+from dataclasses import dataclass
+
 
 @dataclass
 class SyntheticCityConfig:
@@ -20,7 +20,7 @@ class SyntheticCityEngine:
     def __init__(self, rng_seed: int = 42):
         self.rng = random.Random(rng_seed)
 
-    def generate_city(self, base_distribution: Dict[str, float]) -> Dict:
+    def generate_city(self, base_distribution: dict[str, float]) -> dict:
         city_profile = {}
         for category, prob in base_distribution.items():
             noise = self.rng.uniform(-0.1, 0.1)
@@ -33,7 +33,7 @@ class SyntheticCityEngine:
 
         return city_profile
 
-    def generate(self, base_distribution: Dict[str, float], n: int) -> List[Dict]:
+    def generate(self, base_distribution: dict[str, float], n: int) -> list[dict]:
         return [
             {
                 "city_id": f"synthetic_{i}",
@@ -43,10 +43,10 @@ class SyntheticCityEngine:
             for i in range(n)
         ]
 
-    def _entropy(self, dist: Dict[str, float]) -> float:
+    def _entropy(self, dist: dict[str, float]) -> float:
         return -sum(p * math.log(p + 1e-9) for p in dist.values() if p > 0)
 
-    def export(self, cities: List[Dict], output_path: str):
+    def export(self, cities: list[dict], output_path: str):
         with open(output_path, 'w') as f:
             for city in cities:
                 f.write(json.dumps(city) + '\n')
